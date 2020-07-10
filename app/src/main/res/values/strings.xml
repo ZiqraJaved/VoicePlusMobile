@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Voice Plus Mobile</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_subtitle">Professional Repair, Online Mobile Shop And Accessories</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="nav_header_title">Voice Plus Mobile</string>
+    <string name="menu_about_us">About Us</string>
+    <string name="menu_repair_gallery">Repair Gallery</string>
+    <string name="menu_services">Services</string>
+    <string name="menu_pricing">Pricing</string>
+    <string name="menu_contact_us">Contact Us</string>
+    <string name="menu_book_repair">Book Your Repair</string>
+    <string name="menu_login">Login</string>
+    <string name="text_home_top_heading"><![CDATA[Same Day iPhone & Samsung Repairs* Only We offer 3 Months Warranty* On Repairs]]></string>
+    <string name="home_book_me">Book My Repair</string>
+    <string name="home_string_one">Quick and Affordable Smart Phone Repairs</string>
+    <string name="home_text_two">Why Voice Plus Mobile?</string>
+    <string name="home_text_three">Our aim is to offer outstanding services straight to your home or to your office to conduct repair works or troubleshoot your smart phones. For us, the repair work is not just about finding the fault and fixing it, it is about quality parts that are made to last long. We make sure that each of the parts used for repairing are brand new and of the highest quality</string>
+    <string name="home_warranty_head">3 Months Warranty</string>
+    <string name="home_warranty_detail">We offer warranty upto 3 months on all LCD replacements.</string>
+    <string name="dummy_image_content_description">Icon</string>
+</resources>
