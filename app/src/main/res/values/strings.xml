@@ -17,7 +17,7 @@
     <string name="menu_contact_us">Contact Us</string>
     <string name="menu_book_repair">Book Your Repair</string>
     <string name="menu_login">Login</string>
-    <string name="text_home_top_heading"><![CDATA[Same Day iPhone & Samsung Repairs* Only We offer 3 Months Warranty* On Repairs]]></string>
+    <string name="text_home_top_heading">Voice Plus Repairing &amp; Services</string>
     <string name="home_book_me">Book My Repair</string>
     <string name="home_string_one">Quick and Affordable Smart Phone Repairs</string>
     <string name="home_text_two">Why Voice Plus Mobile?</string>
@@ -25,4 +25,19 @@
     <string name="home_warranty_head">3 Months Warranty</string>
     <string name="home_warranty_detail">We offer warranty upto 3 months on all LCD replacements.</string>
     <string name="dummy_image_content_description">Icon</string>
+    <string name="no_fix_no_fee">No Fix, No Fee</string>
+    <string name="no_fix_details">We won\'t ask ever for upfront payment. You\'ll only pay once your device is fixed!</string>
+    <string name="circle">Circle</string>
+    <string name="months_warranty">3 Months Warranty</string>
+    <string name="months_warranty_details">We offer warranty upto 3 months on all LCD replacements.</string>
+    <string name="hours_repair">"48 Hours Repair* "</string>
+    <string name="hours_repair_details">Flat two day repair for Touch/LCD replacement on selected models.</string>
+    <string name="experienced_staff">"Experienced Staff "</string>
+    <string name="experienced_staff_details">Our technicians are certified and carry years of smart phone repair experience.</string>
+    <string name="free_pick_and_drop_details"><![CDATA[We offer free pickup & drop anywhere in Rawalpindi.]]></string>
+    <string name="free_pick_and_drop"><![CDATA["Free Pickup & Drop "]]></string>
+    <string name="data_security_details">Complete Data security. Avail our free cloud backup and secure your data.</string>
+    <string name="data_security">"Data Security* "</string>
+
+
 </resources>

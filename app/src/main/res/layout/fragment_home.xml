@@ -6,19 +6,25 @@
     android:layout_height="match_parent"
     android:layout_marginStart="8sp"
     android:layout_marginLeft="8sp"
-
     android:layout_marginRight="8sp"
     app:layout_goneMarginEnd="8sp"
     tools:context=".ui.home.HomeFragment">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:layout_marginStart="8sp"
+        android:layout_marginLeft="8sp"
+        android:layout_marginRight="8sp"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp">
 
             <TextView
                 android:id="@+id/text_home_top_heading"
@@ -27,411 +33,367 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="8dp"
+                android:fontFamily="@font/font_karla_regular"
                 android:gravity="center_horizontal"
                 android:text="@string/text_home_top_heading"
                 android:textAlignment="center"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/button_home_book_me"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/home_book_me" />
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/font_karla_regular"
                 android:gravity="center_horizontal"
                 android:text="@string/home_string_one"
-
                 android:textAlignment="center"
-                android:textColor="@color/ic_launcher_background" />
+                android:textColor="#FFFFFF" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/tech_headline"
                 android:gravity="center_horizontal"
                 android:text="@string/home_text_two"
+                android:textColor="#FFFFFF"
+
                 android:textAlignment="center"
-                android:textSize="30sp" />
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/font_karla_regular"
                 android:gravity="center_horizontal"
                 android:text="@string/home_text_three"
                 android:textAlignment="center"
+                android:textColor="#FFFFFF"
                 android:textSize="18sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_marginTop="8sp"
-                android:orientation="horizontal">
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:background="@drawable/information_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="225dp">
 
-                <ImageView
-                    android:id="@+id/imageView4"
+                <TextView
+                    android:layout_width="284dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:lineSpacingMultiplier="0.93"
+                    android:text="@string/no_fix_details"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_detail_text_size"
+                    app:layout_constraintTop_toBottomOf="@+id/no_fix_no_fee_heading"
+                    app:layout_goneMarginLeft="30dp"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="49dp" />
+
+                <TextView
+                    android:id="@+id/no_fix_no_fee_heading"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/dummy_image_content_description"
-                    android:src="@drawable/ic_thumbsup" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_head"
-                        android:textAlignment="center"
-                        android:textColor="@color/ic_launcher_background"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_detail"
-                        android:textAlignment="center"
-                        android:textSize="16sp" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8sp"
-                android:orientation="horizontal">
+                    android:layout_marginStart="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginLeft="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginTop="@dimen/information_detail_text_view_margin_start"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:text="@string/no_fix_no_fee"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_heading_text_size"
+                    app:layout_constraintLeft_toRightOf="@+id/no_fix_no_fee_circle"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="72dp"
+                    tools:layout_editor_absoluteY="18dp" />
 
                 <ImageView
-                    android:id="@+id/imageView3"
+                    android:id="@+id/no_fix_no_fee_circle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/dummy_image_content_description"
-                    android:src="@drawable/ic_thumbsup" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_head"
-                        android:textAlignment="center"
-                        android:textColor="@color/ic_launcher_background"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_detail"
-                        android:textAlignment="center"
-                        android:textSize="16sp" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
+                    android:contentDescription="@string/circle"
+                    android:scaleType="center"
+                    android:src="@drawable/circle_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="16dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="112dp"
                 android:layout_marginTop="8sp"
-                android:orientation="horizontal">
+                android:background="@drawable/information_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="225dp">
+
+                <TextView
+                    android:layout_width="284dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:lineSpacingMultiplier="0.93"
+                    android:text="@string/months_warranty_details"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_detail_text_size"
+                    app:layout_constraintTop_toBottomOf="@+id/months_warranty_heading"
+                    app:layout_goneMarginLeft="30dp"
+                    tools:layout_editor_absoluteX="49dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/months_warranty_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginLeft="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginTop="@dimen/information_detail_text_view_margin_start"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:text="@string/months_warranty"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_heading_text_size"
+                    app:layout_constraintLeft_toRightOf="@+id/circle_icon_image_view_month_warranty"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="72dp"
+                    tools:layout_editor_absoluteY="18dp" />
 
                 <ImageView
-                    android:id="@+id/imageView5"
+                    android:id="@+id/circle_icon_image_view_month_warranty"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/dummy_image_content_description"
-                    android:src="@drawable/ic_thumbsup" />
+                    android:scaleType="center"
+                    android:src="@drawable/circle_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="16dp"
+                    android:contentDescription="@string/circle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_head"
-                        android:textAlignment="center"
-                        android:textColor="@color/ic_launcher_background"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_detail"
-                        android:textAlignment="center"
-                        android:textSize="16sp" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="112dp"
                 android:layout_marginTop="8sp"
-                android:orientation="horizontal">
+                android:background="@drawable/information_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="225dp">
+
+                <TextView
+                    android:layout_width="284dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:lineSpacingMultiplier="0.93"
+                    android:text="@string/hours_repair_details"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_detail_text_size"
+                    app:layout_constraintTop_toBottomOf="@+id/hours_repair_heading"
+                    app:layout_goneMarginLeft="30dp"
+                    tools:layout_editor_absoluteX="49dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/hours_repair_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginLeft="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginTop="@dimen/information_detail_text_view_margin_start"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:text="@string/hours_repair"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_heading_text_size"
+                    app:layout_constraintLeft_toRightOf="@+id/circle_icon_image_view_hours_repair"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="72dp"
+                    tools:layout_editor_absoluteY="18dp" />
 
                 <ImageView
-                    android:id="@+id/imageView6"
+                    android:id="@+id/circle_icon_image_view_hours_repair"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/dummy_image_content_description"
-                    android:src="@drawable/ic_thumbsup" />
+                    android:scaleType="center"
+                    android:src="@drawable/circle_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="16dp"
+                    android:contentDescription="@string/circle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_head"
-                        android:textAlignment="center"
-                        android:textColor="@color/ic_launcher_background"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_detail"
-                        android:textAlignment="center"
-                        android:textSize="16sp" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="112dp"
                 android:layout_marginTop="8sp"
-                android:orientation="horizontal">
+                android:background="@drawable/information_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="225dp">
+
+                <TextView
+                    android:layout_width="284dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:lineSpacingMultiplier="0.93"
+                    android:text="@string/experienced_staff_details"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_detail_text_size"
+                    app:layout_constraintTop_toBottomOf="@+id/experienced_staff_heading"
+                    app:layout_goneMarginLeft="30dp"
+                    tools:layout_editor_absoluteX="49dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/experienced_staff_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginLeft="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginTop="@dimen/information_detail_text_view_margin_start"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:text="@string/experienced_staff"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_heading_text_size"
+                    app:layout_constraintLeft_toRightOf="@+id/circle_icon_image_view_experienced_staff"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="72dp"
+                    tools:layout_editor_absoluteY="18dp" />
 
                 <ImageView
-                    android:id="@+id/imageView7"
+                    android:id="@+id/circle_icon_image_view_experienced_staff"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/dummy_image_content_description"
-                    android:src="@drawable/ic_thumbsup" />
+                    android:scaleType="center"
+                    android:src="@drawable/circle_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="16dp"
+                    android:contentDescription="@string/circle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_head"
-                        android:textAlignment="center"
-                        android:textColor="@color/ic_launcher_background"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_detail"
-                        android:textAlignment="center"
-                        android:textSize="16sp" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="112dp"
                 android:layout_marginTop="8sp"
-                android:orientation="horizontal">
+                android:background="@drawable/information_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="225dp">
+
+                <TextView
+                    android:layout_width="284dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:lineSpacingMultiplier="0.93"
+                    android:text="@string/free_pick_and_drop_details"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_detail_text_size"
+                    app:layout_constraintTop_toBottomOf="@+id/free_pick_and_drop_heading"
+                    app:layout_goneMarginLeft="30dp"
+                    tools:layout_editor_absoluteX="49dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/free_pick_and_drop_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginLeft="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginTop="@dimen/information_detail_text_view_margin_start"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:text="@string/free_pick_and_drop"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_heading_text_size"
+                    app:layout_constraintLeft_toRightOf="@+id/circle_icon_image_view_free_pick_and_drop"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="72dp"
+                    tools:layout_editor_absoluteY="18dp" />
 
                 <ImageView
-                    android:id="@+id/imageView8"
+                    android:id="@+id/circle_icon_image_view_free_pick_and_drop"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/dummy_image_content_description"
-                    android:src="@drawable/ic_thumbsup" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_head"
-                        android:textAlignment="center"
-                        android:textColor="@color/ic_launcher_background"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_detail"
-                        android:textAlignment="center"
-                        android:textSize="16sp" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
+                    android:scaleType="center"
+                    android:src="@drawable/circle_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="16dp"
+                    android:contentDescription="@string/circle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="112dp"
                 android:layout_marginTop="8sp"
-                android:orientation="horizontal">
+                android:background="@drawable/information_button"
+                app:layout_constraintLeft_toLeftOf="parent"
+                tools:layout_editor_absoluteX="14dp"
+                tools:layout_editor_absoluteY="225dp">
+
+                <TextView
+                    android:layout_width="284dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:lineSpacingMultiplier="0.93"
+                    android:text="@string/data_security_details"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_detail_text_size"
+                    app:layout_constraintTop_toBottomOf="@+id/data_security_heading"
+                    app:layout_goneMarginLeft="30dp"
+                    tools:layout_editor_absoluteX="49dp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/data_security_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginLeft="@dimen/information_detail_text_view_margin_start"
+                    android:layout_marginTop="@dimen/information_detail_text_view_margin_start"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:gravity="start"
+                    android:text="@string/data_security"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/information_heading_text_size"
+                    app:layout_constraintLeft_toRightOf="@+id/circle_icon_image_view_data_security"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="72dp"
+                    tools:layout_editor_absoluteY="18dp" />
 
                 <ImageView
-                    android:id="@+id/imageView9"
+                    android:id="@+id/circle_icon_image_view_data_security"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/dummy_image_content_description"
-                    android:src="@drawable/ic_thumbsup" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_head"
-                        android:textAlignment="center"
-                        android:textColor="@color/ic_launcher_background"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_detail"
-                        android:textAlignment="center"
-                        android:textSize="16sp" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8sp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/dummy_image_content_description"
-                    android:src="@drawable/ic_thumbsup" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_head"
-                        android:textAlignment="center"
-                        android:textColor="@color/ic_launcher_background"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_detail"
-                        android:textAlignment="center"
-                        android:textSize="16sp" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8sp"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:contentDescription="@string/dummy_image_content_description"
-                    android:src="@drawable/ic_thumbsup" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_head"
-                        android:textAlignment="center"
-                        android:textColor="@color/ic_launcher_background"
-                        android:textSize="24sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/home_warranty_detail"
-                        android:textAlignment="center"
-                        android:textSize="16sp" />
-
-
-                </LinearLayout>
-            </LinearLayout>
-
+                    android:scaleType="center"
+                    android:src="@drawable/circle_icon"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="16dp"
+                    android:contentDescription="@string/circle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
     </ScrollView>
