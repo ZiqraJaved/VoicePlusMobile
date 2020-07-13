@@ -38,6 +38,8 @@
     <string name="free_pick_and_drop"><![CDATA["Free Pickup & Drop "]]></string>
     <string name="data_security_details">Complete Data security. Avail our free cloud backup and secure your data.</string>
     <string name="data_security">"Data Security* "</string>
+    <string name="hint_enter_email">Enter your gmail account</string>
+    <string name="register_your_account">Register your account</string>
 
 
 </resources>
