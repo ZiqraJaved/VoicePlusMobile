@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.bookmyrepair.BookMyRepair">
+
+    <TextView
+        android:id="@+id/txt_quote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text="We Bring your Device back to Life 🙂"
+        android:textAlignment="center"
+        android:layout_marginTop="100dp"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Your Repair"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:layout_marginTop="40dp"
+        android:id="@+id/txt_bookmyrepair"
+        android:gravity="center_horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Instructions*"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="160dp"
+        android:textColor="@color/design_default_color_error"
+        android:layout_marginLeft="20dp"
+        />
+    <TextView
+        android:id="@+id/txt_instruction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="Fill the Quote form and our sales team will get back to you with a competitive price for your mobile repair, by clicking 'submit' button, you are agree to Voice Plus Mobiles term and conditions."
+        android:layout_marginTop="180dp"
+       />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Select Mobile Brand"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="270dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mobile_brand"
+        android:hint="Enter Mobile Brand like 'Apple'"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="290dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile Model No. "
+        android:textStyle="bold"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="340dp"
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mobile_model_no"
+
+        android:hint="Enter Mobile Model Number like 'iphone 5s'"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="360dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is the Problem? "
+        android:textStyle="bold"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="410dp"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/mobile_problem"
+
+        android:hint="Enter Mobile problem like 'Water Damage'"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="430dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Upload, if any? "
+        android:textStyle="bold"
+
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="480dp"
+        />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <EditText
+            android:id="@+id/txt_choosefile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:hint="No File Choose"
+
+            >
+
+        </EditText>
+        <Button
+            android:id="@+id/btn_chooseimage"
+            android:padding="5dp"
+            android:text="Choose File"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/txt_choosefile"
+            android:layout_alignBottom="@+id/txt_choosefile"
+            android:layout_alignRight="@+id/txt_choosefile"
+            android:src="@drawable/information_button" />
+
+    </RelativeLayout>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Terms and Conditions"
+        android:id="@+id/txt_termscondition"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="550dp"
+        />
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Apply Repair"
+        android:id="@+id/btn_apply_repair"
+        android:background="@drawable/information_button"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="600dp"
+        />
+</FrameLayout>

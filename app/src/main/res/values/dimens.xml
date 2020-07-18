@@ -9,5 +9,8 @@
     <dimen name="information_detail_text_view_margin_start">16dp</dimen>
     <dimen name="information_heading_text_size">16sp</dimen>
 
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="headerTextSize">28sp</dimen>
 
 </resources>

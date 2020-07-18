@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.login.profile_update.ProfileUpdateFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/profilePrimaryDark"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_icon" />
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/headerText"
+                        android:layout_marginBottom="20dp"
+                        android:text="Account Info" />
+
+                    <include layout="@layout/content_profile" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imagename"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_name" />
+
+
+                        <EditText
+                            android:id="@+id/profile_update_user_real_name"
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imagename"
+                            android:hint="Enter your name" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imagenumber"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_mobile" />
+
+                        <TextView
+                            style="@style/profileDetailsTextMain"
+                            android:layout_toRightOf="@id/imagenumber"
+                            android:text="Mobile" />
+
+                        <TextView
+                            android:id="@+id/profile_update_user_phone_number"
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imagenumber"
+                            android:text="+91-8129999999" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imageaddress"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_address" />
+
+
+                        <EditText
+                            android:id="@+id/profile_update_user_address"
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imageaddress"
+                            android:hint="Enter your address." />
+
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imageemail"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                        <EditText
+                            android:id="@+id/profile_update_user_password"
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imageemail"
+                            android:hint="Enter your password."
+                            android:inputType="textPassword" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imagefaulty"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                        <EditText
+                            android:id="@+id/profile_update_user_password_conf"
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imagefaulty"
+                            android:hint="Confirm your password."
+                            android:inputType="textPassword" />
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+
+                        android:layout_marginTop="20dp"
+                        android:background="@color/profilePrimaryDark"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/profile_update_account"
+                                style="@style/profileStyledBackButton"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="1"
+                                android:text="Update Account" />
+
+                            <TextView
+                                android:id="@+id/profile_update_back"
+                                style="@style/profileStyledBackButton"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_weight="1"
+                                android:text="Back" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

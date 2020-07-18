@@ -20,7 +20,7 @@
 
     <fragment
         android:id="@+id/nav_login"
-        android:name="com.iteam.voiceplusmobile.ui.login.LoginFragment"
+        android:name="com.iteam.voiceplusmobile.ui.login.user_login.LoginFragment"
         android:label="@string/menu_login"
         tools:layout="@layout/fragment_login" />
 
@@ -31,15 +31,28 @@
         android:label="@string/menu_services"
         tools:layout="@layout/fragment_services" />
 
+    <fragment
+        android:id="@+id/nav_pricing"
+        android:name="com.iteam.voiceplusmobile.ui.pricing.PricingFragment"
+        android:label="@string/menu_services"
+        tools:layout="@layout/fragment_services" />
+
 
     <fragment
         android:id="@+id/nav_slideshow"
         android:name="com.iteam.voiceplusmobile.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
     <fragment
         android:id="@+id/nav_user_register"
-        android:name="com.iteam.voiceplusmobile.ui.register.RegisterFragment"
+        android:name="com.iteam.voiceplusmobile.ui.login.register.RegisterFragment"
+        android:label="@string/register_your_account"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/frag_profile"
+        android:name="com.iteam.voiceplusmobile.ui.login.profile.ProfileFragment"
         android:label="@string/register_your_account"
         tools:layout="@layout/fragment_register" />
 </navigation>

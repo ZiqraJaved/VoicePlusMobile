@@ -38,8 +38,19 @@
     <string name="free_pick_and_drop"><![CDATA["Free Pickup & Drop "]]></string>
     <string name="data_security_details">Complete Data security. Avail our free cloud backup and secure your data.</string>
     <string name="data_security">"Data Security* "</string>
-    <string name="hint_enter_email">Enter your gmail account</string>
+    <string name="hint_enter_phone_number">Enter your phone number.</string>
     <string name="register_your_account">Register your account</string>
+    <string name="title_activity_profile">Profile</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="mode_name">Mode Name</string>
+    <string name="add_new_order">Add New Order</string>
+    <string name="manage_order">Manage Order</string>
 
 </resources>

@@ -2,22 +2,18 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frag_login_account"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.login.LoginFragment">
+    tools:context=".ui.login.user_login.LoginFragment">
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/background"
-        tools:context=".Activity_Login">
+
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="@color/colorAccent"
 
             >
 
@@ -41,28 +37,31 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/txt_user_name"
+                app:layout_constraintBottom_toTopOf="@+id/txt_user_phone_number"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_logo" />
 <!--@TODO: Change user name to user phone number. We need to update server code for user login.-->
             <EditText
-                android:id="@+id/txt_user_name"
+                android:id="@+id/txt_user_phone_number"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_margin="20dp"
+                android:background="@drawable/information_button"
                android:textColorHint="@color/cardview_light_background"
-                android:hint="@string/hint_enter_email"
+                android:hint="@string/hint_enter_phone_number"
                 android:textColor="@color/design_default_color_on_secondary"
                 app:layout_constraintBottom_toTopOf="@+id/txt_user_password"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/txt_loginn" />
 
+
             <EditText
                 android:id="@+id/txt_user_password"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/information_button"
                 android:layout_margin="20dp"
                 android:textColorHint="@color/cardview_light_background"
                 android:hint="Enter your password"
@@ -71,7 +70,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/btn_login"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/txt_user_name" />
+                app:layout_constraintTop_toBottomOf="@+id/txt_user_phone_number" />
 
             <Button
                 android:id="@+id/btn_login"
@@ -95,12 +94,14 @@
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:text="Not Registered? Register Account"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/cardview_light_background"
                 android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/btn_login" />
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+
 
 </FrameLayout>

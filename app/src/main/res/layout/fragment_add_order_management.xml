@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.adminpanel.addneworder.AddNewOrderFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/profilePrimaryDark"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/headerText"
+                        android:layout_marginBottom="20dp"
+                        android:gravity="center_horizontal"
+                        android:text="Add New Order Details" />
+
+                    <include layout="@layout/content_profile" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imagename"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_name" />
+
+
+                        <EditText
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imagename"
+                            android:hint="Enter Customer name" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imagenumber"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_mobile" />
+
+
+                        <EditText
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imagenumber"
+                            android:hint="Enter Customer Mobile Number" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imageaddress"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_address" />
+
+
+                        <EditText
+
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imageaddress"
+                            android:hint="Enter Customer address." />
+
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imagepass"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_address" />
+
+
+                        <EditText
+
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imagepass"
+                            android:text="Password" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imageemail"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                        <EditText
+
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imageemail"
+                            android:hint="Enter Customer Mobile Brnad"
+                            android:inputType="textPassword" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                        <EditText
+                            style="@style/profileDetailsMiniText"
+
+                            android:hint="Enter Mobile Fault"
+                            android:inputType="textPassword" />
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                        <EditText
+
+                            style="@style/profileDetailsMiniText"
+
+                            android:hint="Enter Repairing Charges"
+                            android:inputType="textPassword" />
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout
+                        style="@style/profileDetailsLayout"
+                        android:layout_height="33dp">
+
+                        <ImageView
+
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                        <EditText
+
+                            style="@style/profileDetailsMiniText"
+                            android:hint="Enter Fault Description"
+                            android:inputType="textPassword" />
+                    </RelativeLayout>
+
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                        <EditText
+
+                            style="@style/profileDetailsMiniText"
+                            android:hint="Enter Order Status"
+                            android:inputType="textPassword" />
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+
+                        android:layout_marginTop="20dp"
+                        android:background="@color/profilePrimaryDark"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <Button
+
+                                style="@style/profileStyledBackButton"
+
+                                android:layout_weight="1"
+                                android:text="Add Order" />
+
+                            <Button
+
+                                style="@style/profileStyledBackButton"
+                                android:layout_marginLeft="10dp"
+
+                                android:layout_weight="1"
+                                android:text="Cancel" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.product.ProductFragment">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="4"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Manage Item"
+
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:id="@+id/manageItem"
+        android:textAlignment="center"
+
+        android:gravity="center_horizontal" />
+
+
+    <Button
+        android:id="@+id/serach_item"
+        android:layout_width="371dp"
+        android:layout_height="165dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_weight="1"
+        android:text="Search Item"
+
+
+        />
+
+    <Button
+        android:id="@+id/delete_item"
+        android:layout_width="371dp"
+android:layout_marginRight="20dp"
+        android:layout_height="165dp"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:text="Delete Item"
+
+
+        />
+
+
+    <Button
+    android:id="@+id/update_Item"
+    android:layout_width="373dp"
+    android:layout_height="165dp"
+    android:layout_marginLeft="20dp"
+    android:layout_weight="1"
+        android:layout_marginRight="20dp"
+    android:text="Update Item"
+
+
+    />
+    <Button
+        android:id="@+id/add_item"
+        android:layout_width="371dp"
+        android:layout_height="165dp"
+        android:layout_marginLeft="20dp"
+        android:layout_weight="1"
+        android:layout_marginRight="20dp"
+        android:text="Add New Item"
+
+
+        />
+
+</LinearLayout>
+
+</FrameLayout>
