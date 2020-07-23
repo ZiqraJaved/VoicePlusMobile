@@ -29,6 +29,7 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 import com.iteam.voiceplusmobile.HelperContent;
 import com.iteam.voiceplusmobile.R;
+import com.iteam.voiceplusmobile.ui.bookmyrepair.BookMyRepair;
 import com.iteam.voiceplusmobile.ui.login.profile.ProfileFragment;
 import com.iteam.voiceplusmobile.ui.login.register.RegisterFragment;
 
@@ -158,14 +159,37 @@ public class LoginFragment extends Fragment {
                         HelperContent.setCreated_at(created_at);
                         HelperContent.setUser_password(user_password);
                         progressDoalog.dismiss();
-                        FragmentManager fragmentManager = getFragmentManager();
-                        FragmentTransaction transaction = fragmentManager.beginTransaction();
 
-                        ProfileFragment profileFragment = new ProfileFragment();
-                        transaction.replace(R.id.nav_host_fragment, profileFragment);
-                        transaction.addToBackStack(null);
+                        if (HelperContent.getLast_fragment() == 1) {
+                            HelperContent.setHas_pricing_flag(true);
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction transaction = fragmentManager.beginTransaction();
 
-                        transaction.commit();
+                            BookMyRepair bookMyRepair = new BookMyRepair();
+                            transaction.replace(R.id.nav_host_fragment, bookMyRepair);
+                            transaction.addToBackStack(null);
+                            transaction.commit();
+
+                        } else if (HelperContent.getLast_fragment() == 2) {
+                            HelperContent.setHas_pricing_flag(false);
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+                            BookMyRepair bookMyRepair = new BookMyRepair();
+                            transaction.replace(R.id.nav_host_fragment, bookMyRepair);
+                            transaction.addToBackStack(null);
+                            transaction.commit();
+
+                        } else {
+                            FragmentManager fragmentManager = getFragmentManager();
+                            FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+                            ProfileFragment profileFragment = new ProfileFragment();
+                            transaction.replace(R.id.nav_host_fragment, profileFragment);
+                            transaction.addToBackStack(null);
+
+                            transaction.commit();
+                        }
                     }
                 }
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="?android:attr/listPreferredItemHeight"
+
+    android:layout_height="wrap_content"
     android:layout_marginLeft="10dp"
     android:layout_marginTop="10dp"
     android:layout_marginRight="10dp"
@@ -11,7 +12,7 @@
     android:padding="6dip">
 
     <ImageView
-        android:id="@+id/pricing_icon"
+        android:id="@+id/order_item_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="3dp"
@@ -28,14 +29,20 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/repairing_part_model"
+            android:id="@+id/order_part_model"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"
             android:textSize="20sp" />
 
         <TextView
-            android:id="@+id/repairing_part_name"
+            android:id="@+id/order_part_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textSize="14sp" />
+        <TextView
+            android:id="@+id/order_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="TextView"

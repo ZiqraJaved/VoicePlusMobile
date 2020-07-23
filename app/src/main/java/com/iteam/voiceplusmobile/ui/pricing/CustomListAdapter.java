@@ -19,14 +19,14 @@ import java.util.ArrayList;
 
 public class CustomListAdapter extends BaseAdapter {
 
-    Activity activity;
-    ArrayList customListDataModelArrayList = new ArrayList<>();
+    Context context;
+    ArrayList customListDataModelArrayList;
     LayoutInflater layoutInflater = null;
 
-    public CustomListAdapter(Activity activity, ArrayList customListDataModelArray){
-        this.activity=activity;
+    public CustomListAdapter(Context activity, ArrayList customListDataModelArray) {
+        this.context = activity;
         this.customListDataModelArrayList = customListDataModelArray;
-        layoutInflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
 
@@ -45,43 +45,40 @@ public class CustomListAdapter extends BaseAdapter {
         return i;
     }
 
-    private static class ViewHolder{
+    private static class ViewHolder {
+        public TextView repair_part_model;
+        public TextView repairing_part_name;
         ImageView image_view;
-        TextView tv_name,tv_discription;
 
     }
-    ViewHolder viewHolder = null;
+
+    ViewHolder pricing_item = null;
 
 
     // this method  is called each time for arraylist data size.
     @Override
     public View getView(int position, View view, ViewGroup viewGroup) {
 
-        View vi=view;
+        View vi = view;
         final int pos = position;
-        if(vi == null){
+        if (vi == null) {
+            pricing_item = new ViewHolder();
+            vi = layoutInflater.inflate(R.layout.item, null);
+            pricing_item.image_view = (ImageView) vi.findViewById(R.id.pricing_icon);
+            pricing_item.repair_part_model = (TextView) vi.findViewById(R.id.repairing_part_model);
+            pricing_item.repairing_part_name = (TextView) vi.findViewById(R.id.repairing_part_name);
+            CustomListDataModel customListDataModel = (CustomListDataModel) customListDataModelArrayList.get(pos);
 
-            // create  viewholder object for list_rowcell View.
-            viewHolder = new ViewHolder();
-            // inflate list_rowcell for each row
-            vi = layoutInflater.inflate(R.layout.item,null);
-            viewHolder.image_view = (ImageView) vi.findViewById(R.id.item_icon);
-            viewHolder.tv_name = (TextView) vi.findViewById(R.id.firstLine);
-            viewHolder.tv_discription = (TextView) vi.findViewById(R.id.secondLine);
-            /*We can use setTag() and getTag() to set and get custom objects as per our requirement.
-            The setTag() method takes an argument of type Object, and getTag() returns an Object.*/
-            vi.setTag(viewHolder);
-        }else {
+            pricing_item.image_view.setImageResource(customListDataModel.getImage_id());
+            pricing_item.repair_part_model.setText(customListDataModel.getPhone_model_name());
+            pricing_item.repairing_part_name.setText(customListDataModel.getRepair_part_name());
 
-            /* We recycle a View that already exists */
-            viewHolder= (ViewHolder) vi.getTag();
+            vi.setTag(pricing_item);
+
+        } else {
+
+            pricing_item = (ViewHolder) vi.getTag();
         }
-
-//        viewHolder.image_view.setImageResource(customListDataModelArrayList.get(pos).getImage_id());
-//        viewHolder.tv_name.setText(customListDataModelArrayList.get(pos).getImageName());
-//        viewHolder.tv_discription.setText(customListDataModelArrayList.get(pos).getImageDiscription());
-
-
         return vi;
     }
 }

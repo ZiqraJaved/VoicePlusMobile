@@ -55,4 +55,9 @@
         android:name="com.iteam.voiceplusmobile.ui.login.profile.ProfileFragment"
         android:label="@string/register_your_account"
         tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/nav_book_repair"
+        android:name="com.iteam.voiceplusmobile.ui.bookmyrepair.BookMyRepair"
+        android:label="Book My Repair"
+        tools:layout="@layout/fragment_book_my_repair" />
 </navigation>

@@ -1,11 +1,55 @@
 package com.iteam.voiceplusmobile;
 
+import com.iteam.voiceplusmobile.ui.pricing.CustomListAdapter;
+import com.iteam.voiceplusmobile.ui.pricing.CustomListDataModel;
+
 public class HelperContent {
 
     public static int user_id = 0;
     public static String user_real_name = "";
     public static String user_phone_number = "";
     public static String user_address = "";
+    public static String user_password = "";
+    public static String user_role = "";
+    public static String image = "";
+    public static String created_at = "";
+    public static int last_fragment = 0;
+
+    /**
+     * Default goes to profile
+     * Detail Page View = 1 --- content --- order
+     * Direct from menu = 2 ---- order
+     */
+
+    public static int getLast_fragment() {
+        return last_fragment;
+    }
+
+
+    public static void setLast_fragment(int last_fragment) {
+        HelperContent.last_fragment = last_fragment;
+    }
+
+
+    public static boolean isHas_pricing_flag() {
+        return has_pricing_flag;
+    }
+
+    public static void setHas_pricing_flag(boolean has_pricing_flag) {
+        HelperContent.has_pricing_flag = has_pricing_flag;
+    }
+
+    public static boolean has_pricing_flag = false;
+    public static CustomListDataModel customListDataModel;
+
+    public static CustomListDataModel getCustomListDataModel() {
+        return customListDataModel;
+    }
+
+    public static void setCustomListDataModel(CustomListDataModel customListDataModel) {
+        HelperContent.customListDataModel = customListDataModel;
+    }
+
 
     public static String getUser_password() {
         return user_password;
@@ -15,10 +59,6 @@ public class HelperContent {
         HelperContent.user_password = user_password;
     }
 
-    public static String user_password = "";
-    public static String user_role = "";
-    public static String image = "";
-    public static String created_at = "";
 
     public static String getUser_phone_number() {
         return user_phone_number;

@@ -4,26 +4,31 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.pricing.PricingFragment">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
-    <TextView
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Product Pricing"
-        android:textSize="36sp"
-        android:background="@color/design_default_color_secondary"
-        />
-    <SearchView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/information_button"
-        />
-    <ListView
-        android:id="@+id/list_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_secondary"
+            android:gravity="center_horizontal"
+            android:text="Product Pricing"
+            android:textSize="36sp" />
+
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/information_button" />
+
+        <ListView
+            android:id="@+id/pricing_list_view"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
 </FrameLayout>

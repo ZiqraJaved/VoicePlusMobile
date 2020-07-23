@@ -19,6 +19,9 @@ import com.iteam.voiceplusmobile.HelperContent;
 import com.iteam.voiceplusmobile.R;
 import com.iteam.voiceplusmobile.ui.login.profile_update.ProfileUpdateFragment;
 import com.iteam.voiceplusmobile.ui.login.register.RegisterFragment;
+import com.iteam.voiceplusmobile.ui.orders.OrdersFragment;
+
+import org.w3c.dom.Text;
 
 public class ProfileFragment extends Fragment {
 
@@ -47,13 +50,13 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-        FragmentManager fragmentManager = getFragmentManager();
-        FragmentTransaction transaction = fragmentManager.beginTransaction();
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
 
-        ProfileUpdateFragment profileUpdateFragment = new ProfileUpdateFragment();
-        transaction.replace(R.id.nav_host_fragment, profileUpdateFragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+                ProfileUpdateFragment profileUpdateFragment = new ProfileUpdateFragment();
+                transaction.replace(R.id.nav_host_fragment, profileUpdateFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
 
             }
 
@@ -65,6 +68,19 @@ public class ProfileFragment extends Fragment {
         user_address.setText(HelperContent.getUser_address());
         created_at.setText(HelperContent.getCreated_at());
 
+        TextView profile_view_order_history = view.findViewById(R.id.profile_view_order_history);
+        profile_view_order_history.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+                OrdersFragment ordersFragment = new OrdersFragment();
+                transaction.replace(R.id.nav_host_fragment, ordersFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
 
         return view;
     }
