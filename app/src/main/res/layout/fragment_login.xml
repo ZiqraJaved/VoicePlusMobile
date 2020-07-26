@@ -47,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_margin="20dp"
+                android:inputType="number"
                 android:background="@drawable/information_button"
                android:textColorHint="@color/cardview_light_background"
                 android:hint="@string/hint_enter_phone_number"

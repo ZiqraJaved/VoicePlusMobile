@@ -23,34 +23,35 @@ public class ManageItemFragment extends Fragment {
 
     private ManageItemViewModel mViewModel;
 
-    public static ManageItemFragment newInstance() {
-        return new ManageItemFragment();
+    public ClickListener listener;
+
+    public interface ClickListener {
+        void click();
     }
+
+    public static AddItemManagementFragment newInstance() {
+        return new AddItemManagementFragment();
+    }
+
+    public ManageItemFragment(ClickListener listener) {
+        this.listener = listener;
+    }
+
     private Button button;
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_add_item_management, container, false);
-        button=view.findViewById(R.id.add_item);
+        View view = inflater.inflate(R.layout.fragment_manage_item, container, false);
+        button = view.findViewById(R.id.btn_add_item);
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-
-                AddItemManagementFragment addItemManagementFragment = new AddItemManagementFragment();
-                transaction.replace(R.id.nav_host_fragment, addItemManagementFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-
+                listener.click();
             }
 
         });
-
-
-
 
 
         return view;

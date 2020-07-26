@@ -1,4 +1,4 @@
-package com.iteam.voiceplusmobile.ui.adminpanel.admin;
+package com.iteam.voiceplusmobile.ui.bankpayment;
 
 import androidx.lifecycle.ViewModelProviders;
 
@@ -14,24 +14,24 @@ import android.view.ViewGroup;
 
 import com.iteam.voiceplusmobile.R;
 
-public class AdminPanelFragment extends Fragment {
+public class BankPayment extends Fragment {
 
-    private AdminPanelViewModel mViewModel;
+    private BankPaymentViewModel mViewModel;
 
-    public static AdminPanelFragment newInstance() {
-        return new AdminPanelFragment();
+    public static BankPayment newInstance() {
+        return new BankPayment();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_admin_panel, container, false);
+        return inflater.inflate(R.layout.fragment_bank_payment, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(AdminPanelViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(BankPaymentViewModel.class);
         // TODO: Use the ViewModel
     }
 

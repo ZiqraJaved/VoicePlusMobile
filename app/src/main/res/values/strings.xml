@@ -52,5 +52,8 @@
     <string name="mode_name">Mode Name</string>
     <string name="add_new_order">Add New Order</string>
     <string name="manage_order">Manage Order</string>
+    <string name="action_profile">Profile</string>
+    <string name="openDrawer">Open Drawer</string>
+    <string name="closeDrawer">Close Drawer</string>
 
 </resources>

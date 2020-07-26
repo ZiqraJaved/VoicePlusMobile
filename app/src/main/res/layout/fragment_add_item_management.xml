@@ -90,6 +90,7 @@
             >
             <Button
                 android:layout_weight="1"
+                android:id="@+id/admin_add_item"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="5dp"

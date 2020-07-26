@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nav_item_activity_titles">
+        <item>Manage Item</item>
+        <item>Manage Order</item>
+        <item>Chat Box</item>
+        <item>Manage Profile</item>
+        <item>Bank Account</item>
+        <item>Feedback</item>
+        <item>Logout</item>
+    </string-array>
+</resources>

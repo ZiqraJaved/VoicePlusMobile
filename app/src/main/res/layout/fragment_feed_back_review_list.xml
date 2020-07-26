@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.adminpanel.manageitem.ManageItemFragment">
+    tools:context=".ui.feedbackreview.FeedBackReview">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,34 +13,23 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorAccent"
+            android:background="@color/design_default_color_secondary"
             android:gravity="center_horizontal"
-            android:text="Manage Item"
-            android:textAlignment="center"
-            android:textSize="48sp"
-            android:textStyle="bold" />
+            android:text="Feedback Reviews"
+            android:textSize="36sp" />
 
         <SearchView
-            android:id="@+id/btn_search_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="@drawable/information_button" />
 
-        <Button
-            android:id="@+id/btn_add_item"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/information_button"
-            android:drawableLeft="@drawable/additem"
-            android:text="Add New Item"
-
-            />
-
         <ListView
-            android:id="@+id/list_view"
+            android:id="@+id/pricing_list_view"
+            android:clickable="true"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" />
     </LinearLayout>
+
 </FrameLayout>

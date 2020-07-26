@@ -22,6 +22,7 @@ public class AddItemManagementFragment extends Fragment {
 
     private AddItemManagementViewModel mViewModel;
     private Button button;
+
     public static AddItemManagementFragment newInstance() {
         return new AddItemManagementFragment();
     }
@@ -30,25 +31,25 @@ public class AddItemManagementFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
 
                              @Nullable Bundle savedInstanceState) {
-        View view= inflater.inflate(R.layout.fragment_add_item_management, container, false);
-        button=view.findViewById(R.id.btn_add_item_cancel);
+        View view = inflater.inflate(R.layout.fragment_add_item_management, container, false);
+        button = view.findViewById(R.id.btn_add_item_cancel);
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
-
-                ManageItemFragment manageItemFragment = new ManageItemFragment();
-                transaction.replace(R.id.nav_host_fragment, manageItemFragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
+//                FragmentManager fragmentManager = getFragmentManager();
+//                FragmentTransaction transaction = fragmentManager.beginTransaction();
+//
+//                ManageItemFragment manageItemFragment = new ManageItemFragment(new ManageItemFragment.ClickListener() {
+//                });
+//                transaction.replace(R.id.nav_host_fragment, manageItemFragment);
+//                transaction.addToBackStack(null);
+//                transaction.commit();
 
             }
 
         });
-
 
 
         return view;
