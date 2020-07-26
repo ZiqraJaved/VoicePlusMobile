@@ -55,5 +55,6 @@
     <string name="action_profile">Profile</string>
     <string name="openDrawer">Open Drawer</string>
     <string name="closeDrawer">Close Drawer</string>
+    <string name="type_text">Type your message</string>
 
 </resources>

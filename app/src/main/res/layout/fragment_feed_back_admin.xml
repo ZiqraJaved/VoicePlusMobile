@@ -20,7 +20,7 @@
             android:fontFamily="@font/tech_headline"
             android:gravity="center_horizontal"
             android:text="Customer Feedback"
-            android:textSize="30sp"/>
+            android:textSize="30sp" />
 
 
         <TextView
