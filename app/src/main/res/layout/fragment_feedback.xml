@@ -7,23 +7,28 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/design_default_color_secondary">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="20dp"
             android:layout_marginRight="20dp"
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/tech_headline"
                 android:text="Feed back / Contact Us"
-                android:textSize="30sp"></TextView>
+                android:gravity="center_horizontal"
+                android:background="@color/design_default_color_secondary"
+                android:textSize="26sp"></TextView>
 
             <TextView
+                android:background="@color/design_default_color_secondary"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -36,15 +41,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Your Name"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:background="@color/design_default_color_secondary"
+                />
 
             <EditText
+                android:background="@color/design_default_color_secondary"
+
                 android:id="@+id/feed_back_your_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></EditText>
 
 
             <TextView
+                android:background="@color/design_default_color_secondary"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -52,12 +63,16 @@
                 android:textSize="18sp" />
 
             <EditText
+                android:background="@color/design_default_color_secondary"
+
                 android:id="@+id/feed_back_your_phone_number"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="phone"></EditText>
 
             <TextView
+                android:background="@color/design_default_color_secondary"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
@@ -65,6 +80,8 @@
                 android:textSize="18sp" />
 
             <EditText
+                android:background="@color/design_default_color_secondary"
+
                 android:id="@+id/feed_back_your_message"
                 android:layout_width="match_parent"
                 android:layout_height="100sp"
@@ -73,7 +90,9 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Submit"></Button>
+                android:text="Submit"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/information_button"/>
         </LinearLayout>
 
     </ScrollView>

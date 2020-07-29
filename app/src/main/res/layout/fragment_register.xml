@@ -109,7 +109,7 @@
                         <ImageView
                             android:id="@+id/imageemail"
                             style="@style/profileDetailsImage"
-                            android:src="@drawable/ic_email" />
+                            android:src="@drawable/ic_login" />
 
                         <EditText
                             android:id="@+id/register_user_password"
@@ -127,7 +127,7 @@
                         <ImageView
                             android:id="@+id/imagefaulty"
                             style="@style/profileDetailsImage"
-                            android:src="@drawable/ic_email" />
+                            android:src="@drawable/ic_login" />
 
                         <EditText
                             android:id="@+id/register_user_password_conf"

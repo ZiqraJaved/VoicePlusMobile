@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/design_default_color_secondary"
     tools:context=".ui.feedbackreview.FeedBackReview">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,11 +28,9 @@
             android:background="@drawable/information_button" />
 
         <ListView
-            android:id="@+id/pricing_list_view"
-            android:clickable="true"
+            android:id="@+id/order_list_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp" />
+            android:layout_height="match_parent" />
     </LinearLayout>
-
+</ScrollView>
 </FrameLayout>

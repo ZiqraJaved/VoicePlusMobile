@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/frag_login_account"
     android:layout_width="match_parent"
+    android:background="@color/design_default_color_secondary"
     android:layout_height="match_parent"
     tools:context=".ui.login.user_login.LoginFragment">
 
 
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -48,6 +51,7 @@
                 android:layout_height="40dp"
                 android:layout_margin="20dp"
                 android:inputType="number"
+                android:paddingLeft="20dp"
                 android:background="@drawable/information_button"
                android:textColorHint="@color/cardview_light_background"
                 android:hint="@string/hint_enter_phone_number"
@@ -62,6 +66,7 @@
                 android:id="@+id/txt_user_password"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
+                android:paddingLeft="20dp"
                 android:background="@drawable/information_button"
                 android:layout_margin="20dp"
                 android:textColorHint="@color/cardview_light_background"
@@ -78,8 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
-                android:background="@color/colorPrimaryDark"
-                android:text="Login"
+                android:background="@drawable/information_button"                android:text="Login"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/txt_notregister"
@@ -104,5 +108,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/btn_login" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+</ScrollView>
 </FrameLayout>

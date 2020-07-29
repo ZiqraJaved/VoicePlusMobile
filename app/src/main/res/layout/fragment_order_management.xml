@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/design_default_color_secondary"
     tools:context=".ui.adminpanel.ordermanagement.OrderManagementFragment">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,8 +38,9 @@
             android:drawableLeft="@drawable/additem"
             />
         <ListView
+            android:id="@+id/order_list_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-
+</ScrollView>
 </FrameLayout>

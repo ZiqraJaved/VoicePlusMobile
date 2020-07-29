@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "23784962232",
+    "firebase_url": "https://voice-plus-mobile.firebaseio.com",
+    "project_id": "voice-plus-mobile",
+    "storage_bucket": "voice-plus-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23784962232:android:24c1b4dcdc3c4a7181dc4d",
+        "android_client_info": {
+          "package_name": "com.iteam.voiceplusmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23784962232-dtf029poilk885n5higcpe38mffhvcuu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDO0XYTUVofy27uKc6HO5OVN1FiodhbbPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23784962232-dtf029poilk885n5higcpe38mffhvcuu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

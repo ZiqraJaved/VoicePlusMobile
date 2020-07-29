@@ -8,6 +8,16 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
             android:title="@string/menu_home" />
+
+
+        <item
+            android:id="@+id/nav_pricing"
+            android:icon="@drawable/ic_pricing"
+            android:title="@string/menu_pricing" />
+        <item
+            android:id="@+id/nav_book_repair"
+            android:icon="@drawable/ic_book_repair"
+            android:title="@string/menu_book_repair" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_repair"
@@ -17,20 +27,19 @@
             android:icon="@drawable/ic_services"
             android:title="@string/menu_services" />
         <item
-            android:id="@+id/nav_pricing"
-            android:icon="@drawable/ic_pricing"
-            android:title="@string/menu_pricing" />
-        <item
             android:id="@+id/nav_contact_us"
             android:icon="@drawable/ic_contact_us"
-            android:title="@string/menu_contact_us" />
+            android:title="@string/feedback" />
+
         <item
-            android:id="@+id/nav_book_repair"
-            android:icon="@drawable/ic_book_repair"
-            android:title="@string/menu_book_repair" />
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/chatboxx"
+            android:title="@string/chat_box" />
+
         <item
             android:id="@+id/nav_login"
             android:icon="@drawable/ic_login"
             android:title="@string/menu_login" />
+
     </group>
 </menu>

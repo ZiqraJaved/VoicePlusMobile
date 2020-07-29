@@ -4,27 +4,34 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_item"
-            android:title="Manage Item" />
+            android:title="@string/manage_item"
+android:icon="@drawable/manageitem"            />
         <item
             android:id="@+id/nav_order"
-            android:title="Manage Order" />
+            android:title="@string/manage_order"
+            android:icon="@drawable/manageorder"/>
         <item
             android:id="@+id/nav_chat"
-            android:title="Chat Box" />
+            android:title="@string/chat_box"
+            android:icon="@drawable/chatboxx"/>
 
         <item
             android:id="@+id/nav_profile"
-            android:title="Manage Profile" />
+            android:title="@string/manage_profile"
+            android:icon="@drawable/manageprofilee"/>
 
         <item
             android:id="@+id/nav_account"
-            android:title="Bank Account" />
+            android:title="@string/bank_account"
+            android:icon="@drawable/bank"/>
         <item
             android:id="@+id/nav_feedback"
-            android:title="Feedback" />
+            android:title="@string/feedback"
+            android:icon="@drawable/feedback"/>
         <item
             android:id="@+id/nav_logout"
-            android:title="Log out" />
+            android:title="@string/log_out"
+            android:icon="@drawable/ic_login"/>
     </group>
 
 </menu>

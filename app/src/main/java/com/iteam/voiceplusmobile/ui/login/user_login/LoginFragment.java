@@ -31,6 +31,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.iteam.voiceplusmobile.HelperContent;
 import com.iteam.voiceplusmobile.MainActivity;
 import com.iteam.voiceplusmobile.R;
+import com.iteam.voiceplusmobile.ui.PreferencesUtils;
 import com.iteam.voiceplusmobile.ui.adminpanel.admin.AdminPanelActivity;
 import com.iteam.voiceplusmobile.ui.bookmyrepair.BookMyRepair;
 import com.iteam.voiceplusmobile.ui.login.profile.ProfileFragment;
@@ -114,6 +115,8 @@ public class LoginFragment extends Fragment {
     private void sendPost(String user_phone_number, final String user_password) {
         try {
             if (this.user_phone_number.getText().toString().equals("1122") && this.user_password.getText().toString().equals("1")) {
+                PreferencesUtils.getInstance(getActivity()).setUname(this.user_phone_number.getText().toString());
+                PreferencesUtils.getInstance(getActivity()).setUType("admin");
                 startActivity(new Intent(getActivity(), AdminPanelActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                 if (getActivity() != null)
                     getActivity().finish();
@@ -148,6 +151,8 @@ public class LoginFragment extends Fragment {
                                     Toast.LENGTH_LONG).show();
                             HelperContent.setAllNull();
                         } else {
+                            PreferencesUtils.getInstance(getActivity()).setUname(user_phone_number);
+                            PreferencesUtils.getInstance(getActivity()).setUType("user");
                             if (navigationView != null) {
                                 MainActivity.hasLoggedIn = true;
                                 if (getActivity() != null)
@@ -160,6 +165,7 @@ public class LoginFragment extends Fragment {
                                     @Override
                                     public boolean onMenuItemClick(MenuItem menuItem) {
                                         startActivity(new Intent(getActivity(), MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                                        PreferencesUtils.getInstance(getActivity()).clearAll();
                                         return false;
 
                                     }

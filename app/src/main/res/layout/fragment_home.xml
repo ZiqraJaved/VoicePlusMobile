@@ -288,59 +288,7 @@
                     android:contentDescription="@string/circle" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="112dp"
-                android:layout_marginTop="8sp"
-                android:background="@drawable/information_button"
-                app:layout_constraintLeft_toLeftOf="parent"
-                tools:layout_editor_absoluteX="14dp"
-                tools:layout_editor_absoluteY="225dp">
-
-                <TextView
-                    android:layout_width="284dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="20dp"
-                    android:fontFamily="@font/font_karla_regular"
-                    android:gravity="start"
-                    android:lineSpacingMultiplier="0.93"
-                    android:text="@string/free_pick_and_drop_details"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/information_detail_text_size"
-                    app:layout_constraintTop_toBottomOf="@+id/free_pick_and_drop_heading"
-                    app:layout_goneMarginLeft="30dp"
-                    tools:layout_editor_absoluteX="49dp"
-                    tools:ignore="MissingConstraints" />
-
-                <TextView
-                    android:id="@+id/free_pick_and_drop_heading"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/information_detail_text_view_margin_start"
-                    android:layout_marginLeft="@dimen/information_detail_text_view_margin_start"
-                    android:layout_marginTop="@dimen/information_detail_text_view_margin_start"
-                    android:fontFamily="@font/font_karla_regular"
-                    android:gravity="start"
-                    android:text="@string/free_pick_and_drop"
-                    android:textColor="#FFFFFF"
-                    android:textSize="@dimen/information_heading_text_size"
-                    app:layout_constraintLeft_toRightOf="@+id/circle_icon_image_view_free_pick_and_drop"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_editor_absoluteX="72dp"
-                    tools:layout_editor_absoluteY="18dp" />
-
-                <ImageView
-                    android:id="@+id/circle_icon_image_view_free_pick_and_drop"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:scaleType="center"
-                    android:src="@drawable/circle_icon"
-                    app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="16dp"
-                    android:contentDescription="@string/circle" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+           
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="112dp"
