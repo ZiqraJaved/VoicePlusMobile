@@ -37,6 +37,7 @@
             android:gravity="center_horizontal"/>
 
         <Button
+            android:id="@+id/btn_easypaisa"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Via Easypaisa"
@@ -44,19 +45,14 @@
             android:background="@drawable/information_button"
             />
         <Button
+            android:id="@+id/btn_jazzcash"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Via Cash"
+            android:text="Via Jazz Cash"
             android:layout_marginTop="20dp"
             android:background="@drawable/information_button"
             />
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Other method"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/information_button"
-            />
+
 
     </LinearLayout>
 

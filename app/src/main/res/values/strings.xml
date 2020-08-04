@@ -63,5 +63,7 @@
     <string name="bank_account">Bank Account</string>
     <string name="feedback">Feedback</string>
     <string name="log_out">Log out</string>
+    <string name="smoocb_api">5f21eb136eb68a000ddebf39</string>
+    <string name="payment">Payment</string>
 
 </resources>

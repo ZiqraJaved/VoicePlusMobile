@@ -20,79 +20,56 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/tech_headline"
-                android:text="Feed back / Contact Us"
-                android:gravity="center_horizontal"
                 android:background="@color/design_default_color_secondary"
+                android:fontFamily="@font/tech_headline"
+                android:gravity="center_horizontal"
+                android:text="Feed back / Contact Us"
                 android:textSize="26sp"></TextView>
 
             <TextView
-                android:background="@color/design_default_color_secondary"
-
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@color/design_default_color_secondary"
                 android:gravity="center_horizontal"
                 android:text="Your Feedback"
                 android:textSize="18sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Your Name"
-                android:textSize="18sp"
-                android:background="@color/design_default_color_secondary"
-                />
 
             <EditText
-                android:background="@color/design_default_color_secondary"
-
-                android:id="@+id/feed_back_your_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"></EditText>
-
-
-            <TextView
-                android:background="@color/design_default_color_secondary"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Your Phone Number"
-                android:textSize="18sp" />
-
-            <EditText
-                android:background="@color/design_default_color_secondary"
-
                 android:id="@+id/feed_back_your_phone_number"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/design_default_color_secondary"
                 android:inputType="phone"></EditText>
 
             <TextView
-                android:background="@color/design_default_color_secondary"
-
                 android:layout_width="match_parent"
+
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
+                android:background="@color/design_default_color_secondary"
                 android:text="Your Message"
                 android:textSize="18sp" />
 
             <EditText
-                android:background="@color/design_default_color_secondary"
-
                 android:id="@+id/feed_back_your_message"
                 android:layout_width="match_parent"
-                android:layout_height="100sp"
-                android:inputType="textImeMultiLine"></EditText>
+                android:layout_height="200dp"
+                android:background="@drawable/ret_background"
+                android:inputType="textImeMultiLine"
+                android:lines="10"
+                android:maxLines="10" />
 
             <Button
+                android:id="@+id/btn_submit_fb"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Submit"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/information_button"/>
+                android:background="@drawable/information_button"
+                android:text="Submit" />
         </LinearLayout>
 
     </ScrollView>

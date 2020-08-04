@@ -4,34 +4,34 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_item"
-            android:title="@string/manage_item"
-android:icon="@drawable/manageitem"            />
+            android:icon="@drawable/manageitem"
+            android:title="@string/manage_item" />
         <item
             android:id="@+id/nav_order"
-            android:title="@string/manage_order"
-            android:icon="@drawable/manageorder"/>
+            android:icon="@drawable/manageorder"
+            android:title="@string/manage_order" />
         <item
             android:id="@+id/nav_chat"
-            android:title="@string/chat_box"
-            android:icon="@drawable/chatboxx"/>
+            android:icon="@drawable/chatboxx"
+            android:title="@string/chat_box" />
 
         <item
             android:id="@+id/nav_profile"
-            android:title="@string/manage_profile"
-            android:icon="@drawable/manageprofilee"/>
+            android:icon="@drawable/manageprofilee"
+            android:title="@string/manage_profile" />
 
         <item
             android:id="@+id/nav_account"
-            android:title="@string/bank_account"
-            android:icon="@drawable/bank"/>
+            android:icon="@drawable/bank"
+            android:title="@string/bank_account" />
         <item
             android:id="@+id/nav_feedback"
-            android:title="@string/feedback"
-            android:icon="@drawable/feedback"/>
+            android:icon="@drawable/feedback"
+            android:title="@string/feedback" />
         <item
             android:id="@+id/nav_logout"
-            android:title="@string/log_out"
-            android:icon="@drawable/ic_login"/>
+            android:icon="@drawable/ic_login"
+            android:title="@string/log_out" />
     </group>
 
 </menu>

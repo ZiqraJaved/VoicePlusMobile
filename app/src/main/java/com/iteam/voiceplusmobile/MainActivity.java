@@ -3,6 +3,7 @@ package com.iteam.voiceplusmobile;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -28,24 +29,28 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     public static boolean hasLoggedIn = false;
+    private DrawerLayout drawer;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getIntent().getExtras() != null) {
             HelperContent.setLast_fragment(3);
         }
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        drawer = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
         navigationView.setItemIconTintList(null);
 //        navigationView.setNavigationItemSelectedListener(drawer);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_pricing, R.id.nav_services, R.id.nav_login, R.id.nav_book_repair)
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_pricing, R.id.nav_services, R.id.nav_login
+                , R.id.nav_book_repair, R.id.nav_chat, R.id.nav_payment)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -57,8 +62,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        if (hasLoggedIn)
+        if (hasLoggedIn) {
             getMenuInflater().inflate(R.menu.main, menu);
+            View v = drawer.findViewById(R.id.nav_payment);
+            if (v != null)
+                v.setVisibility(View.VISIBLE);
+        }
         return true;
     }
 

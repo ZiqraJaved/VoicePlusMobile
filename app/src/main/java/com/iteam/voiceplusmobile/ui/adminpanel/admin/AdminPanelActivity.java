@@ -25,7 +25,6 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.iteam.voiceplusmobile.MainActivity;
 import com.iteam.voiceplusmobile.R;
-import com.iteam.voiceplusmobile.ui.PreferencesUtils;
 import com.iteam.voiceplusmobile.ui.adminpanel.additemmanagement.AddItemManagementFragment;
 import com.iteam.voiceplusmobile.ui.adminpanel.addneworder.AddNewOrderFragment;
 import com.iteam.voiceplusmobile.ui.adminpanel.manageitem.ManageItemFragment;
@@ -240,7 +239,6 @@ public class AdminPanelActivity extends AppCompatActivity {
                         CURRENT_TAG = TAG_FEEDBACK;
                         break;
                     case R.id.nav_logout:
-                        PreferencesUtils.getInstance(AdminPanelActivity.this).clearAll();
                         startActivity(new Intent(AdminPanelActivity.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
                         finish();
                         break;

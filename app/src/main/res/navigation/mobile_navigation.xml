@@ -60,4 +60,22 @@
         android:name="com.iteam.voiceplusmobile.ui.bookmyrepair.BookMyRepair"
         android:label="Book My Repair"
         tools:layout="@layout/fragment_book_my_repair" />
+    <fragment
+        android:id="@+id/nav_chat"
+        android:name="com.iteam.voiceplusmobile.ui.chatbox.ChatBoxFragment"
+        android:label="Chat Box"
+        tools:layout="@layout/fragment_chat_box" />
+
+    <fragment
+        android:id="@+id/nav_contact_us"
+        android:name="com.iteam.voiceplusmobile.ui.feedbackreview.feedback"
+        android:label="Chat Box"
+        tools:layout="@layout/fragment_feedback" />
+
+    <fragment
+        android:id="@+id/nav_payment"
+        android:name="com.iteam.voiceplusmobile.ui.bankpayment.BankPayment"
+        android:label="@string/payment"
+        tools:layout="@layout/fragment_bank_payment" />
+
 </navigation>
