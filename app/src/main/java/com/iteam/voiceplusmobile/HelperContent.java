@@ -1,5 +1,6 @@
 package com.iteam.voiceplusmobile;
 
+import com.iteam.voiceplusmobile.ui.adminpanel.ordermanagement.CustomOrderModel;
 import com.iteam.voiceplusmobile.ui.pricing.CustomListAdapter;
 import com.iteam.voiceplusmobile.ui.pricing.CustomListDataModel;
 
@@ -41,6 +42,17 @@ public class HelperContent {
 
     public static boolean has_pricing_flag = false;
     public static CustomListDataModel customListDataModel;
+
+    public static CustomOrderModel getCustomOrderModel() {
+        return customOrderModel;
+    }
+
+    public static void setCustomOrderModel(CustomOrderModel customOrderModel) {
+        HelperContent.customOrderModel = customOrderModel;
+    }
+
+    public static CustomOrderModel customOrderModel;
+
 
     public static CustomListDataModel getCustomListDataModel() {
         return customListDataModel;

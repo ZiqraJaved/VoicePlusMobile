@@ -8,133 +8,164 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:background="@color/design_default_color_secondary"
-            android:fontFamily="@font/font_karla_regular"
-            android:gravity="center_horizontal"
-            android:text="Product Detail"
-
-            android:textAlignment="center"
-            android:textSize="36sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/price_detail_company_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/ic_launcher_background"
-            android:fontFamily="@font/font_karla_regular"
-            android:gravity="center_horizontal"
-            android:text="Company Name"
-
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/price_detail_item_model"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorAccent"
-            android:fontFamily="@font/font_karla_regular"
-            android:gravity="center_horizontal"
-            android:hint="Enter Mobile Model"
-
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-        <ImageView
-            android:id="@+id/price_detail_image_id"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:adjustViewBounds="true"
-            android:maxWidth="110dp"
-            android:maxHeight="110dp"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_services" />
-
-        <TextView
-            android:id="@+id/price_detail_repair_part"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/ic_launcher_background"
-            android:fontFamily="@font/font_karla_regular"
-            android:gravity="center_horizontal"
-            android:text="Part Name"
-            android:textAlignment="center"
-
-            android:textSize="36sp" />
-
-        <TextView
-            android:id="@+id/price_detail_price"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/colorAccent"
-            android:fontFamily="@font/font_karla_regular"
-            android:gravity="center_horizontal"
-            android:text="Price"
-            android:textAlignment="center"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/price_detail_product_description"
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/design_default_color_secondary_variant"
-            android:fontFamily="@font/font_karla_regular"
-            android:hint="Enter Product Description"
-
-            />
+        android:layout_height="match_parent">
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:weightSum="2">
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
 
-            <Button
-                android:id="@+id/pricing_btn_back"
+            android:orientation="vertical">
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/information_button"
+                android:layout_marginBottom="10dp"
+                android:background="@color/design_default_color_secondary"
                 android:fontFamily="@font/font_karla_regular"
-                android:text="Back"
+                android:gravity="center_horizontal"
+                android:text="Product Detail"
 
-                />
+                android:textAlignment="center"
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/price_detail_book_btn"
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
+                android:text="Mobile Model:" />
 
-                android:layout_weight="1"
-
-                android:background="@drawable/information_button"
+            <TextView
+                android:id="@+id/price_detail_item_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:fontFamily="@font/font_karla_regular"
-                android:text="Book My Repair"
+                android:gravity="center_horizontal"
+                android:text="Enter Mobile Model"
+                android:textAlignment="center"
 
-                />
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile Company:" />
+
+            <TextView
+                android:id="@+id/price_detail_company_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/font_karla_regular"
+                android:gravity="center_horizontal"
+                android:text="Company Name"
+                android:textAlignment="center"
+
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/price_detail_image_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="110dp"
+                android:maxHeight="110dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_services" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mobile Part:" />
+
+            <TextView
+
+                android:id="@+id/price_detail_repair_part"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/font_karla_regular"
+                android:gravity="center_horizontal"
+                android:text="Part Name"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Price:" />
+
+            <TextView
+                android:id="@+id/price_detail_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:fontFamily="@font/font_karla_regular"
+                android:gravity="center_horizontal"
+                android:text="Price"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Part Description:" />
+
+            <TextView
+                android:id="@+id/price_detail_product_description"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/ret_background"
+                android:padding="5dp"
+                android:text="Enter Product Description"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/pricing_btn_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/information_button"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:text="Back"
+
+                    />
+
+                <Button
+                    android:id="@+id/price_detail_book_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+
+                    android:layout_weight="1"
+
+                    android:background="@drawable/information_button"
+                    android:fontFamily="@font/font_karla_regular"
+                    android:text="Book My Repair"
+
+                    />
+            </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
     </ScrollView>
 </FrameLayout>

@@ -61,7 +61,7 @@ public class LoginFragment extends Fragment {
         user_phone_number = root.findViewById(R.id.txt_user_phone_number);
         user_password = root.findViewById(R.id.txt_user_password);
         Button button = (Button) root.findViewById(R.id.btn_login);
-        TextView clickTextView = root.findViewById(R.id.txt_notregister);
+        Button clickTextView = root.findViewById(R.id.txt_notregister);
         navigationView = getActivity().findViewById(R.id.nav_view);
 
         try {
@@ -135,13 +135,17 @@ public class LoginFragment extends Fragment {
             LoginUser login_user = new LoginUser();
             login_user.setUser_phone_number(user_phone_number);
             login_user.setUser_password(user_password);
-            Call<LoginUser> call = loginService.sendLoginInformation(login_user);
+
+
             final ProgressDialog progressDoalog;
             progressDoalog = new ProgressDialog(getContext());
             progressDoalog.setMessage("Login your account into application.");
             progressDoalog.setTitle("Please Wait");
             progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             progressDoalog.show();
+
+            Call<LoginUser> call = loginService.sendLoginInformation(login_user);
+
             call.enqueue(new Callback<LoginUser>() {
                 @Override
                 public void onResponse(Call<LoginUser> call, Response<LoginUser> response) {

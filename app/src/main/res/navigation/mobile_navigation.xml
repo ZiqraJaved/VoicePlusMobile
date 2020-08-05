@@ -14,14 +14,14 @@
     <fragment
         android:id="@+id/nav_gallery"
         android:name="com.iteam.voiceplusmobile.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="@string/repair_gallery"
         tools:layout="@layout/fragment_gallery" />
 
 
     <fragment
         android:id="@+id/nav_login"
         android:name="com.iteam.voiceplusmobile.ui.login.user_login.LoginFragment"
-        android:label="@string/menu_login"
+        android:label="@string/login_account"
         tools:layout="@layout/fragment_login" />
 
 
@@ -34,7 +34,7 @@
     <fragment
         android:id="@+id/nav_pricing"
         android:name="com.iteam.voiceplusmobile.ui.pricing.PricingFragment"
-        android:label="@string/menu_services"
+        android:label="@string/product_pricing"
         tools:layout="@layout/fragment_services" />
 
 
@@ -47,29 +47,29 @@
     <fragment
         android:id="@+id/nav_user_register"
         android:name="com.iteam.voiceplusmobile.ui.login.register.RegisterFragment"
-        android:label="@string/register_your_account"
+        android:label="@string/register_account"
         tools:layout="@layout/fragment_register" />
 
     <fragment
         android:id="@+id/frag_profile"
         android:name="com.iteam.voiceplusmobile.ui.login.profile.ProfileFragment"
-        android:label="@string/register_your_account"
+        android:label="@string/profile_info"
         tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/nav_book_repair"
         android:name="com.iteam.voiceplusmobile.ui.bookmyrepair.BookMyRepair"
-        android:label="Book My Repair"
+        android:label="@string/book_my_repair"
         tools:layout="@layout/fragment_book_my_repair" />
     <fragment
         android:id="@+id/nav_chat"
         android:name="com.iteam.voiceplusmobile.ui.chatbox.ChatBoxFragment"
-        android:label="Chat Box"
+        android:label="@string/chat_box"
         tools:layout="@layout/fragment_chat_box" />
 
     <fragment
         android:id="@+id/nav_contact_us"
         android:name="com.iteam.voiceplusmobile.ui.feedbackreview.feedback"
-        android:label="Chat Box"
+        android:label="@string/feed_back"
         tools:layout="@layout/fragment_feedback" />
 
     <fragment

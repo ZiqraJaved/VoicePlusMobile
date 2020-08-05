@@ -17,24 +17,16 @@
             android:layout_marginRight="20dp"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/design_default_color_secondary"
-                android:fontFamily="@font/tech_headline"
-                android:gravity="center_horizontal"
-                android:text="Feed back / Contact Us"
-                android:textSize="26sp"></TextView>
 
             <TextView
                 android:layout_width="match_parent"
-
+                android:textStyle="bold"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@color/design_default_color_secondary"
                 android:gravity="center_horizontal"
-                android:text="Your Feedback"
-                android:textSize="18sp" />
+                android:text="Please enter you feedback about our services. Thankyou"
+                android:textSize="24sp" />
 
 
             <EditText

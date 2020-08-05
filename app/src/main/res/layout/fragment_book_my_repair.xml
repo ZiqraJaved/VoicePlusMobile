@@ -7,8 +7,10 @@
     tools:context=".ui.bookmyrepair.BookMyRepair">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-<LinearLayout
+        android:layout_height="match_parent"
+
+        >
+       <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -26,23 +28,14 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/txt_bookmyrepair"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Book Your Repair"
-        android:textAlignment="center"
-        android:textColor="@color/ic_launcher_background"
-        android:textSize="36sp"
-        android:textStyle="bold" />
+
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Instructions*"
         android:textColor="@color/design_default_color_error"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <TextView
@@ -53,9 +46,12 @@
         android:textSize="14sp" />
 
     <TextView
+        android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Mobile Brand"
+        android:textSize="20dp"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <EditText
@@ -63,11 +59,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Mobile Brand like 'Apple'" />
+           <View style="@style/proifleDetailsView" />
 
     <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Mobile Model No. "
+        android:textSize="20dp"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <EditText
@@ -75,11 +75,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Mobile Model Number like 'iphone 5s'" />
+           <View style="@style/proifleDetailsView" />
 
     <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="What is the Problem? "
+        android:textSize="20dp"
+        android:textColor="@color/black"
         android:textStyle="bold" />
 
     <EditText
@@ -90,18 +94,22 @@
 
         android:hint="Enter Mobile problem like 'Water Damage'" />
 
+           <View style="@style/proifleDetailsView" />
     <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:text="File Upload, if any? "
-        android:textStyle="bold" />
-
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+
         >
+
 
         <EditText
             android:id="@+id/txt_choosefile"
@@ -116,7 +124,7 @@
 
         <Button
             android:id="@+id/btn_chooseimage"
-            android:layout_width="170dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/txt_choosefile"
             android:layout_alignRight="@+id/txt_choosefile"
@@ -128,19 +136,23 @@
 
     </RelativeLayout>
 
+           <View style="@style/proifleDetailsView" />
     <CheckBox
+        android:textColor="@color/design_default_color_error"
+        android:layout_marginTop="20dp"
         android:id="@+id/checkbox_book_repair"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Terms and Conditions"
-        android:textSize="20sp"
+        android:textSize="20dp"
         android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:weightSum="2">
+        android:weightSum="2"
+        android:layout_marginTop="20dp">
 
         <Button
             android:id="@+id/btn_apply_repair"

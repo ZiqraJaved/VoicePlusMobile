@@ -65,5 +65,12 @@
     <string name="log_out">Log out</string>
     <string name="smoocb_api">5f21eb136eb68a000ddebf39</string>
     <string name="payment">Payment</string>
+    <string name="login_account">Login Account</string>
+    <string name="repair_gallery">Repair Gallery</string>
+    <string name="product_pricing">Product Pricing</string>
+    <string name="register_account">Register Account</string>
+    <string name="profile_info">Profile Info</string>
+    <string name="book_my_repair">Book My Repair</string>
+    <string name="feed_back">Feed Back</string>
 
 </resources>

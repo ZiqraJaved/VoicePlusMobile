@@ -5,24 +5,13 @@
     android:layout_height="match_parent"
     android:background="@color/design_default_color_secondary"
     tools:context=".ui.adminpanel.ordermanagement.OrderManagementFragment">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         >
-        <TextView
-            android:background="@color/colorAccent"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/manage_order"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:gravity="center_horizontal"
-            android:textSize="48sp"
-            />
+
         <SearchView
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
@@ -42,5 +31,4 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-</ScrollView>
 </FrameLayout>

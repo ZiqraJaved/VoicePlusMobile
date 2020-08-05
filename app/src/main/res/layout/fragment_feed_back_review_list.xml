@@ -5,9 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/design_default_color_secondary"
     tools:context=".ui.feedbackreview.FeedBackReview">
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -32,5 +30,5 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>
-</ScrollView>
+
 </FrameLayout>

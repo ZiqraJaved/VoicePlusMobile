@@ -1,50 +1,64 @@
 package com.iteam.voiceplusmobile.ui.bookmyrepair;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class OrderSchema {
 
-//    "user_phone_number": [
-//            "This field is required."
-//            ],
-//            "mobile_brand": [
-//            "This field is required."
-//            ],
-//            "mobile_model": [
-//            "This field is required."
+    @SerializedName("user_phone_number")
+    @Expose
+    private String userPhoneNumber;
+    @SerializedName("mobile_brand")
+    @Expose
+    private String mobileBrand;
+    @SerializedName("mobile_model")
+    @Expose
+    private String mobileModel;
+    @SerializedName("mobile_fault")
+    @Expose
+    private String mobileFault;
+    @SerializedName("image")
+    @Expose
+    private Object image;
 
-    public String getMobile_fault() {
-        return mobile_fault;
+    public String getUserPhoneNumber() {
+        return userPhoneNumber;
     }
 
-    public void setMobile_fault(String mobile_fault) {
-        this.mobile_fault = mobile_fault;
+    public void setUserPhoneNumber(String userPhoneNumber) {
+        this.userPhoneNumber = userPhoneNumber;
     }
 
-    public String getUser_phone_number() {
-        return user_phone_number;
+    public String getMobileBrand() {
+        return mobileBrand;
     }
 
-    public void setUser_phone_number(String user_phone_number) {
-        this.user_phone_number = user_phone_number;
+    public void setMobileBrand(String mobileBrand) {
+        this.mobileBrand = mobileBrand;
     }
 
-    public String getMobile_brand() {
-        return mobile_brand;
+    public String getMobileModel() {
+        return mobileModel;
     }
 
-    public void setMobile_brand(String mobile_brand) {
-        this.mobile_brand = mobile_brand;
+    public void setMobileModel(String mobileModel) {
+        this.mobileModel = mobileModel;
     }
 
-    public String getMobile_model() {
-        return mobile_model;
+    public String getMobileFault() {
+        return mobileFault;
     }
 
-    public void setMobile_model(String mobile_model) {
-        this.mobile_model = mobile_model;
+    public void setMobileFault(String mobileFault) {
+        this.mobileFault = mobileFault;
     }
 
-    private String mobile_fault;
-    private String user_phone_number;
-    private String mobile_brand;
-    private String mobile_model;
+    public Object getImage() {
+        return image;
+    }
+
+    public void setImage(Object image) {
+        this.image = image;
+    }
+
 }

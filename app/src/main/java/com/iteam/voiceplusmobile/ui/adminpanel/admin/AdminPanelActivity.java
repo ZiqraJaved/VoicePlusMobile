@@ -15,26 +15,21 @@ import androidx.fragment.app.FragmentTransaction;
 
 
 import android.os.Handler;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.iteam.voiceplusmobile.MainActivity;
 import com.iteam.voiceplusmobile.R;
 import com.iteam.voiceplusmobile.ui.adminpanel.additemmanagement.AddItemManagementFragment;
-import com.iteam.voiceplusmobile.ui.adminpanel.addneworder.AddNewOrderFragment;
 import com.iteam.voiceplusmobile.ui.adminpanel.manageitem.ManageItemFragment;
 import com.iteam.voiceplusmobile.ui.adminpanel.ordermanagement.OrderManagementFragment;
 import com.iteam.voiceplusmobile.ui.bankpayment.BankPayment;
 import com.iteam.voiceplusmobile.ui.chatbox.ChatBoxFragment;
 import com.iteam.voiceplusmobile.ui.feedbackreview.FeedBackAdmin;
+import com.iteam.voiceplusmobile.ui.feedbackreview.FeedBackReview;
 import com.iteam.voiceplusmobile.ui.home.HomeFragment;
 import com.iteam.voiceplusmobile.ui.login.profile.ProfileFragment;
-import com.iteam.voiceplusmobile.ui.orders.OrdersFragment;
 
 public class AdminPanelActivity extends AppCompatActivity {
     private NavigationView navigationView;
@@ -66,7 +61,7 @@ public class AdminPanelActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.admin_pane_main);
+        setContentView(R.layout.admin_panel_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -185,8 +180,8 @@ public class AdminPanelActivity extends AppCompatActivity {
 
             case 5:
                 // notifications fragment
-                FeedBackAdmin feedBackAdmin = new FeedBackAdmin();
-                return feedBackAdmin;
+                FeedBackReview feedBackReview = new FeedBackReview();
+                return feedBackReview;
 
 
             default:

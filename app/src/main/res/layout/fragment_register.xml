@@ -44,7 +44,7 @@
                     <TextView
                         style="@style/headerText"
                         android:layout_marginBottom="20dp"
-                        android:text="Account Info" />
+                        android:text="Register Your Account" />
 
                     <include layout="@layout/content_profile" />
 

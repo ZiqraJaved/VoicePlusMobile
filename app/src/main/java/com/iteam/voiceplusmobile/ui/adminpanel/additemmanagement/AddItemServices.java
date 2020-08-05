@@ -8,7 +8,7 @@ import retrofit2.http.Headers;
 import retrofit2.http.POST;
 
 public interface AddItemServices {
-    String API_ROUTE = "register_user/";
+    String API_ROUTE = "add_new_item";
 
     @Headers({
 
@@ -16,5 +16,5 @@ public interface AddItemServices {
 
     })
     @POST(API_ROUTE)
-    Call<RegisterUser> sendLoginInformation(@Body RegisterUser registerUser);
+    Call<AddItem> addNewItem(@Body AddItem addItem);
 }

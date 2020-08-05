@@ -60,7 +60,17 @@ public class AddItem {
 //    minimum: -2147483648
 //    x-nullable: true
       String repairing_description;
-//    title: Repairing description
+
+    public String getDetail() {
+        return detail;
+    }
+
+    public void setDetail(String detail) {
+        this.detail = detail;
+    }
+
+    //    title: Repairing description
 //    maxLength: 1000
 //    minLength: 1
+    String detail;
 }

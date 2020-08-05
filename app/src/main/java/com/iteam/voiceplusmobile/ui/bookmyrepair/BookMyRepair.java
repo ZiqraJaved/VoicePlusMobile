@@ -16,6 +16,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,13 +28,14 @@ import android.widget.Toast;
 import com.iteam.voiceplusmobile.HelperContent;
 import com.iteam.voiceplusmobile.R;
 import com.iteam.voiceplusmobile.ui.login.user_login.LoginFragment;
+import com.iteam.voiceplusmobile.ui.login.user_login.LoginService;
 import com.iteam.voiceplusmobile.ui.pricing.CustomListDataModel;
 import com.iteam.voiceplusmobile.ui.pricing.PricingFragment;
 
 public class BookMyRepair extends Fragment {
 
-    private RepairService repairService;
-    private String registerUrl = "https://voice-plus-mobile.herokuapp.com/api/";
+    private final String BookRepairUrl = "https://voice-plus-mobile.herokuapp.com/api/";
+    private RepairService EndPointName;
 
     private BookMyRepairViewModel mViewModel;
 
@@ -120,20 +122,14 @@ public class BookMyRepair extends Fragment {
                     String user_phone_number = HelperContent.getUser_phone_number();
                     String mobile_brand = book_repair_company_name.getText().toString();
                     String mobile_model = book_repair_mobile_model.getText().toString();
-                    System.out.print("Output --- " + mobile_fault + " " + user_phone_number + " " + mobile_brand + " " + mobile_model);
 
-                    try {
-//                        Url of login service
-                        Retrofit retrofit = new Retrofit.Builder()
-                                .baseUrl(registerUrl)
-                                .addConverterFactory(GsonConverterFactory.create())
-                                .build();
-                        repairService = retrofit.create(RepairService.class);
-                        System.out.print("Output --- " + mobile_fault + " " + user_phone_number + " " + mobile_brand + " " + mobile_model);
-                        registerOrder(mobile_fault, user_phone_number, mobile_brand, mobile_model);
-                    } catch (Exception e) {
-                        Toast.makeText(getActivity().getBaseContext(), e.toString(), Toast.LENGTH_LONG).show();
-                    }
+                    Retrofit retrofit = new Retrofit.Builder()
+                            .baseUrl(BookRepairUrl)
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .build();
+                    EndPointName = retrofit.create(RepairService.class);
+                    callEndPoint(mobile_fault, user_phone_number, mobile_brand, mobile_model);
+
 
                 }
 
@@ -143,48 +139,46 @@ public class BookMyRepair extends Fragment {
         return view;
     }
 
-    private void registerOrder(final String mobile_fault, String user_phone_number, String mobile_brand, String mobile_model) {
-        final ProgressDialog progressDoalog;
-        progressDoalog = new ProgressDialog(getContext());
-        progressDoalog.setMessage("Registering your order.");
-        progressDoalog.setTitle("Please Wait");
-        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-
+    private void callEndPoint(String mobile_fault, String user_phone_number, String mobile_brand, String mobile_model) {
         try {
-            OrderSchema orderSchema = new OrderSchema();
-            orderSchema.setMobile_brand(mobile_brand);
-            orderSchema.setMobile_fault(mobile_fault);
-            orderSchema.setMobile_model(mobile_model);
-            orderSchema.setUser_phone_number(user_phone_number);
 
-            Call<OrderSchema> call = repairService.bookMyOrder(orderSchema);
+            OrderSchema endpoint_schema = new OrderSchema();
 
+            endpoint_schema.setUserPhoneNumber(user_phone_number);
+            endpoint_schema.setMobileModel(mobile_model);
+            endpoint_schema.setMobileBrand(mobile_brand);
+            endpoint_schema.setMobileFault(mobile_fault);
+            endpoint_schema.setImage(null);
+
+
+            final ProgressDialog progressDoalog;
+            progressDoalog = new ProgressDialog(getContext());
+            progressDoalog.setMessage("Registering your order online.");
+            progressDoalog.setTitle("Please Wait");
+            progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             progressDoalog.show();
 
+            Call<OrderSchema> call = EndPointName.bookRepair(endpoint_schema);
             call.enqueue(new Callback<OrderSchema>() {
                 @Override
                 public void onResponse(Call<OrderSchema> call, Response<OrderSchema> response) {
-
-                    OrderSchema _response = response.body();
                     progressDoalog.dismiss();
-
+                    if(response.isSuccessful()) {
+                        String TAG="VOICE_PLUS_MOBILE";
+                        Log.i(TAG, "post submitted to API." + response.body().toString());
+                    }
+                    System.out.println(response.body());
                 }
 
                 @Override
                 public void onFailure(Call<OrderSchema> call, Throwable t) {
                     progressDoalog.dismiss();
-                    t.getMessage();
-                    Toast.makeText(getActivity().getBaseContext(), "~Failed to created account. " +
-                                    "Please re-try with some different phone number.",
-                            Toast.LENGTH_LONG).show();
+                    System.out.println("Failed to store record in database" + t.getMessage());
                 }
-
             });
-        } catch (Exception e) {
-            progressDoalog.dismiss();
-            Toast.makeText(getActivity().getBaseContext(), "^Failed to created account. " +
-                            "Please re-try with some different phone number.",
-                    Toast.LENGTH_LONG).show();
+
+        } catch (Exception exception) {
+
         }
     }
 
