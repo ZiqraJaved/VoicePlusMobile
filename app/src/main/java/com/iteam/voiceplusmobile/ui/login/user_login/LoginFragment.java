@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProviders;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
+import android.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -109,8 +111,6 @@ public class LoginFragment extends Fragment {
                         String _user_phone_number, _password;
                         _user_phone_number = user_phone_number.getText().toString();
                         _password = user_password.getText().toString();
-
-//                        Url of login service
                         Retrofit retrofit = new Retrofit.Builder()
                                 .baseUrl(LoginUrl)
                                 .addConverterFactory(GsonConverterFactory.create())
@@ -144,6 +144,7 @@ public class LoginFragment extends Fragment {
             progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
             progressDoalog.show();
 
+
             Call<LoginUser> call = loginService.sendLoginInformation(login_user);
 
             call.enqueue(new Callback<LoginUser>() {
@@ -168,6 +169,7 @@ public class LoginFragment extends Fragment {
                     } else {
                         if (navigationView != null) {
                             MainActivity.hasLoggedIn = true;
+
                             if (getActivity() != null)
                                 getActivity().invalidateOptionsMenu();
                             Menu menu = navigationView.getMenu();
@@ -180,16 +182,21 @@ public class LoginFragment extends Fragment {
 
                             MenuItem nav_feedback = menu.findItem(R.id.nav_contact_us);
                             nav_feedback.setVisible(true);
+                            try {
+                                nav_login.setOnMenuItemClickListener(null);
+                                nav_login.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+                                    @Override
+                                    public boolean onMenuItemClick(MenuItem menuItem) {
+                                        startActivity(new Intent(getActivity(), MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                                        return false;
 
-                            nav_login.setOnMenuItemClickListener(null);
-                            nav_login.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
-                                @Override
-                                public boolean onMenuItemClick(MenuItem menuItem) {
-                                    startActivity(new Intent(getActivity(), MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-                                    return false;
+                                    }
+                                });
 
-                                }
-                            });
+                            } catch (Exception exp) {
+                                Toast.makeText(getActivity().getBaseContext(), "Sorry for inconvenience, Please restart application.", Toast.LENGTH_LONG).show();
+                            }
+
 //                            nav_login.setVisible(false);
                         }
 

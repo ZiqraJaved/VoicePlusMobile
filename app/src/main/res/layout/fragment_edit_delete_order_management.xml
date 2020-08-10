@@ -214,17 +214,18 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal"
-                            android:weightSum="2">
+                            android:weightSum="2"
+                            android:layout_marginBottom="30dp">
 
                             <Button
 
                                 style="@style/profileStyledBackButton"
-
+                                android:id="@+id/btn_admin_order_edit"
                                 android:layout_weight="1"
                                 android:text="Edit Order" />
 
                             <Button
-
+                                android:id="@+id/btn_admin_order_delete"
                                 style="@style/profileStyledBackButton"
                                 android:layout_marginLeft="10dp"
 

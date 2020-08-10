@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Voice Plus Mobile</string>
+    <string name="app_name">Voice Plus Mobile Solution</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_subtitle">Professional Repair, Online Mobile Shop And Accessories</string>
@@ -72,5 +72,16 @@
     <string name="profile_info">Profile Info</string>
     <string name="book_my_repair">Book My Repair</string>
     <string name="feed_back">Feed Back</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="delete_item">Delete Item</string>
+    <string name="product_image">Product Image</string>
+    <string name="product_description">Product Description</string>
+    <string name="product_price">Product Price</string>
+    <string name="enter_product_name">Enter Product Name</string>
+    <string name="part_product_name">Part/product Name</string>
+    <string name="enter_mobile_model">Enter Mobile Model</string>
+    <string name="mobile_model">Mobile Model</string>
+    <string name="enter_mobile_brand">Enter Mobile Brand</string>
+    <string name="mobile_company">Mobile Company</string>
 
 </resources>

@@ -1,76 +1,65 @@
 package com.iteam.voiceplusmobile.ui.adminpanel.additemmanagement;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class AddItem {
-    public String getMobile_company() {
-        return mobile_company;
+
+    @SerializedName("mobile_company")
+    @Expose
+    private String mobileCompany;
+    @SerializedName("mobile_model")
+    @Expose
+    private String mobileModel;
+    @SerializedName("repairing_description")
+    @Expose
+    private String repairingDescription;
+    @SerializedName("repairing_part")
+    @Expose
+    private String repairingPart;
+    @SerializedName("repairing_price")
+    @Expose
+    private Integer repairingPrice;
+
+    public String getMobileCompany() {
+        return mobileCompany;
     }
 
-    public void setMobile_company(String mobile_company) {
-        this.mobile_company = mobile_company;
+    public void setMobileCompany(String mobileCompany) {
+        this.mobileCompany = mobileCompany;
     }
 
-    public String getMobile_model() {
-        return mobile_model;
+    public String getMobileModel() {
+        return mobileModel;
     }
 
-    public void setMobile_model(String mobile_model) {
-        this.mobile_model = mobile_model;
+    public void setMobileModel(String mobileModel) {
+        this.mobileModel = mobileModel;
     }
 
-    public String getRepairing_part() {
-        return repairing_part;
+    public String getRepairingDescription() {
+        return repairingDescription;
     }
 
-    public void setRepairing_part(String repairing_part) {
-        this.repairing_part = repairing_part;
+    public void setRepairingDescription(String repairingDescription) {
+        this.repairingDescription = repairingDescription;
     }
 
-    public Integer getRepairing_price() {
-        return repairing_price;
+    public String getRepairingPart() {
+        return repairingPart;
     }
 
-    public void setRepairing_price(Integer repairing_price) {
-        this.repairing_price = repairing_price;
+    public void setRepairingPart(String repairingPart) {
+        this.repairingPart = repairingPart;
     }
 
-    public String getRepairing_description() {
-        return repairing_description;
+    public Integer getRepairingPrice() {
+        return repairingPrice;
     }
 
-    public void setRepairing_description(String repairing_description) {
-        this.repairing_description = repairing_description;
+    public void setRepairingPrice(Integer repairingPrice) {
+        this.repairingPrice = repairingPrice;
     }
 
-    String mobile_company;
-//
-//    title: Mobile company
-//    maxLength: 50
-//    minLength: 1
-   String mobile_model;
-//    title: Mobile model
-//    maxLength: 50
-//    minLength: 1
-    String repairing_part;
-//    title: Repairing part
-//    maxLength: 70
-//    minLength
-     Integer repairing_price;
-//    title: Repairing price
-//    maximum: 2147483647
-//    minimum: -2147483648
-//    x-nullable: true
-      String repairing_description;
 
-    public String getDetail() {
-        return detail;
-    }
-
-    public void setDetail(String detail) {
-        this.detail = detail;
-    }
-
-    //    title: Repairing description
-//    maxLength: 1000
-//    minLength: 1
-    String detail;
 }

@@ -40,8 +40,9 @@
             android:id="@+id/feed_back_customer_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:hint="Customer Name"
             android:textSize="20dp" />
+        <View style="@style/proifleDetailsView" />
 
 
         <TextView
@@ -56,8 +57,9 @@
             android:id="@+id/feed_back_customer_phone_number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
+            android:hint="Customer Phone Number"
             android:textSize="20dp" />
+        <View style="@style/proifleDetailsView" />
 
         <TextView
             android:layout_width="match_parent"
@@ -67,13 +69,15 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/feed_back_customer_message"
+        <EditText
+            android:id="@+id/feed_back_your_message"
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="200dp"
+            android:background="@drawable/ret_background"
             android:inputType="textImeMultiLine"
-            android:textSize="20dp" />
-
+            android:lines="10"
+            android:hint="Customer Feed back"
+            android:maxLines="10" />
 
     </LinearLayout>
 </ScrollView>

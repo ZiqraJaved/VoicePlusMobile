@@ -3,6 +3,16 @@ package com.iteam.voiceplusmobile.ui.pricing;
 public class CustomListDataModel {
 
     private int image_id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    private int id;
     private String phone_model_name;
     private String repair_part_name;
     private String mobile_company;
@@ -56,10 +66,6 @@ public class CustomListDataModel {
     public void setRepairing_description(String repairing_description) {
         this.repairing_description = repairing_description;
     }
-
-
-
-
 
 
 }

@@ -21,6 +21,16 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:text="Please insert data in desire filled to add new item."
+            android:layout_marginBottom="20dp"
+
+            android:textSize="20dp"
+            android:textColor="@color/design_default_color_error"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="Mobile Company"
             android:textSize="20dp"
             android:textColor="@color/black"
@@ -31,11 +41,12 @@
             android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter Mobile Brand"
+            android:hint="Enter Mobile Company Name"
 
             />
         <View style="@style/proifleDetailsView" />
         <TextView
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Mobile Model"
@@ -48,12 +59,13 @@
             android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+
             android:hint="Enter Mobile Model"
            />
         <View style="@style/proifleDetailsView" />
 
         <TextView
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Part/product Name"
@@ -74,17 +86,20 @@
             android:layout_height="match_parent"
             android:text="Product Price"
             android:textSize="20dp"
+            android:layout_marginTop="10dp"
             android:textColor="@color/black"
             android:textStyle="bold"
             />
         <EditText
             android:id="@+id/admin_item_price"
             android:padding="5dp"
+            android:hint="Enter Porduct Price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
           />
         <View style="@style/proifleDetailsView" />
         <TextView
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Product Description"
@@ -99,6 +114,7 @@
             android:background="@drawable/ret_background"
             android:inputType="textImeMultiLine"
             android:lines="10"
+            android:hint="Enter Product Description"
             android:maxLines="10" />
         <View style="@style/proifleDetailsView" />
         <TextView
@@ -118,24 +134,25 @@
             >
 
 
-            <EditText
-                android:id="@+id/txt_choosefile"
+            <TextView
+                android:id="@+id/admin_txt_image_file"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:hint="No File Choose"
+                android:textSize="20dp"
 
                 >
 
-            </EditText>
+            </TextView>
 
             <Button
-                android:id="@+id/btn_chooseimage"
+                android:id="@+id/btn_admin_choose_file"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/txt_choosefile"
-                android:layout_alignRight="@+id/txt_choosefile"
-                android:layout_alignBottom="@+id/txt_choosefile"
+                android:layout_alignTop="@+id/admin_txt_image_file"
+                android:layout_alignRight="@+id/admin_txt_image_file"
+                android:layout_alignBottom="@+id/admin_txt_image_file"
                 android:padding="5dp"
                 android:background="@drawable/information_button"
                 android:src="@drawable/information_button"
@@ -148,6 +165,7 @@
             android:layout_height="wrap_content"
             android:weightSum="2"
             android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
             >
             <Button
                 android:layout_weight="1"

@@ -6,123 +6,276 @@
     android:background="@color/design_default_color_secondary"
     tools:context=".ui.adminpanel.editdeleteitem.EditDeleteItemFragment">
 
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_marginLeft="20dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginRight="20dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginBottom="10dp"-->
+<!--                android:background="@color/design_default_color_secondary"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:text="Item Description"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="36sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/manageItem_company_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:background="@color/colorAccent"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:hint="Mobile Brand"-->
+
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="24sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/manageItem_model_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/colorAccent"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:hint="Mobile Model"-->
+
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="24sp" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/manageItem_image"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:src="@drawable/ic_services" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/manageItem_part_name"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/colorPrimary"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:hint="Product Name"-->
+
+<!--                android:textAlignment="center"-->
+
+<!--                android:textSize="36sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/manageItem_price"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/colorAccent"-->
+<!--                android:gravity="center_horizontal"-->
+<!--                android:hint="Product Price"-->
+<!--                android:textAlignment="center"-->
+<!--                android:textSize="24sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/manageItem_details"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="250dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:background="@color/design_default_color_secondary_variant"-->
+<!--                android:hint="Product Description"-->
+
+<!--                />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:weightSum="2">-->
+
+<!--                <Button-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginRight="5dp"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/information_button"-->
+<!--                    android:text="Edit Item"-->
+
+<!--                    />-->
+
+<!--                <Button-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="5dp"-->
+
+
+<!--                    android:layout_weight="1"-->
+<!--                    android:background="@drawable/information_button"-->
+<!--                    android:text="Delete Item"-->
+
+<!--                    />-->
+<!--            </LinearLayout>-->
+<!--        </LinearLayout>-->
+
+<!--    </ScrollView>-->
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content"
+        >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
             android:layout_marginBottom="20dp"
-            android:orientation="vertical">
-
+            >
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:background="@color/design_default_color_secondary"
-                android:gravity="center_horizontal"
-                android:text="Item Description"
-                android:textAlignment="center"
-                android:textSize="36sp"
-                android:textStyle="bold" />
-
+                android:layout_height="match_parent"
+                android:text="@string/mobile_company"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
             <TextView
-                android:id="@+id/manageItem_company_name"
+                android:id="@+id/admin_view_item_brand"
+                android:padding="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                android:gravity="center_horizontal"
-                android:hint="Mobile Brand"
-
-                android:textAlignment="center"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/manageItem_model_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorAccent"
-                android:gravity="center_horizontal"
-                android:hint="Mobile Model"
-
-                android:textAlignment="center"
-                android:textSize="24sp" />
-
-            <ImageView
-                android:id="@+id/manageItem_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/ic_services" />
-
-            <TextView
-                android:id="@+id/manageItem_part_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorPrimary"
-                android:gravity="center_horizontal"
-                android:hint="Product Name"
-
-                android:textAlignment="center"
-
-                android:textSize="36sp" />
-
-            <TextView
-                android:id="@+id/manageItem_price"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorAccent"
-                android:gravity="center_horizontal"
-                android:hint="Product Price"
-                android:textAlignment="center"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/manageItem_details"
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/design_default_color_secondary_variant"
-                android:hint="Product Description"
+                android:hint="@string/enter_mobile_brand"
 
                 />
+            <View style="@style/proifleDetailsView" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/mobile_model"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/admin_view_item_model"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/enter_mobile_model"
+                />
+            <View style="@style/proifleDetailsView" />
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/part_product_name"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/admin_view_item_product_name"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/enter_product_name"
+                />
+            <View style="@style/proifleDetailsView" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/product_price"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/admin_view_item_price"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+            <View style="@style/proifleDetailsView" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/product_description"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/admin_view_repairing_description"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/ret_background"
+                android:inputType="textImeMultiLine"
+                android:lines="10"
+                android:maxLines="10" />
+            <View style="@style/proifleDetailsView" />
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/product_image"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                >
+
+
+           <ImageView
+               android:layout_width="match_parent"
+               android:layout_height="150dp"
+               android:src="@drawable/ic_services"
+               android:id="@+id/admin_view_item_image"/>
+
+
+            </RelativeLayout>
+            <View style="@style/proifleDetailsView" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:weightSum="2">
-
+                android:weightSum="2"
+                android:layout_marginTop="20dp"
+                >
                 <Button
+                    android:layout_weight="1"
+                    android:id="@+id/btn_admin_edit_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="5dp"
-                    android:layout_weight="1"
                     android:background="@drawable/information_button"
-                    android:text="Edit Item"
+                    android:text="@string/edit_item"
 
                     />
-
                 <Button
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-
 
                     android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:id="@+id/btn_admin_delete_Item"
+
                     android:background="@drawable/information_button"
-                    android:text="Delete Item"
+                    android:text="@string/delete_item"
+                    android:layout_marginLeft="5dp"
 
                     />
             </LinearLayout>
         </LinearLayout>
-
     </ScrollView>
 </FrameLayout>

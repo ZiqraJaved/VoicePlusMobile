@@ -72,6 +72,12 @@ public class ProfileFragment extends Fragment {
         profile_view_order_history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+//                FragmentManager fragmentManager = getFragmentManager();
+//                FragmentTransaction transaction = fragmentManager.beginTransaction();
+//                ProfileFragment profileFragment = new ProfileFragment();
+//                transaction.replace(R.id.nav_host_fragment, profileFragment);
+//                transaction.addToBackStack(null);
+//                transaction.commit();
                 FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction transaction = fragmentManager.beginTransaction();
 

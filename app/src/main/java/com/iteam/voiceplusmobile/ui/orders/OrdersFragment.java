@@ -77,7 +77,12 @@ public class OrdersFragment extends Fragment {
                         customListOrderModel.setDate_item_delivered(orderSchema.getDateItemDelivered());
                         customListOrderModel.setOrder_status(orderSchema.getOrderStatus());
                         customListOrderModel.setHas_repaired(orderSchema.getHasRepaired());
-                        customListOrderModel.setCharges(orderSchema.getCharges());
+                        try{
+                            customListOrderModel.setCharges(orderSchema.getCharges());
+                        }
+                        catch(Exception exp){
+                            customListOrderModel.setCharges(0);
+                        }
                         customListDataModelArrayList.add(customListOrderModel);
                     }
                     list_view = view.findViewById(R.id.order_list_view);

@@ -53,6 +53,7 @@
 
 
                         <EditText
+                            android:id="@+id/order_customer_name"
                             style="@style/profileDetailsMiniText"
                             android:layout_toRightOf="@id/imagename"
                             android:hint="Enter Customer name" />
@@ -70,6 +71,7 @@
 
 
                         <EditText
+                            android:id="@+id/order_customer_number"
                             style="@style/profileDetailsMiniText"
                             android:layout_toRightOf="@id/imagenumber"
                             android:hint="Enter Customer Mobile Number" />
@@ -87,6 +89,7 @@
 
 
                         <EditText
+                            android:id="@+id/order_customer_address"
 
                             style="@style/profileDetailsMiniText"
                             android:layout_toRightOf="@id/imageaddress"
@@ -106,8 +109,10 @@
 
                         <EditText
 
+                            android:id="@+id/order_customer_password"
                             style="@style/profileDetailsMiniText"
                             android:layout_toRightOf="@id/imagepass"
+                            android:inputType="textPassword"
                             android:text="Password" />
 
                     </RelativeLayout>
@@ -123,28 +128,11 @@
 
                         <EditText
 
+                            android:id="@+id/order_mobile_company"
                             style="@style/profileDetailsMiniText"
                             android:layout_toRightOf="@id/imageemail"
-                            android:hint="Enter Customer Mobile Brnad"
-                            android:inputType="textPassword" />
+                            android:hint="Enter Mobile Company" />
 
-                    </RelativeLayout>
-
-                    <View style="@style/proifleDetailsView" />
-
-
-                    <RelativeLayout style="@style/profileDetailsLayout">
-
-                        <ImageView
-
-                            style="@style/profileDetailsImage"
-                            android:src="@drawable/ic_email" />
-
-                        <EditText
-                            style="@style/profileDetailsMiniText"
-
-                            android:hint="Enter Mobile Fault"
-                            android:inputType="textPassword" />
                     </RelativeLayout>
 
                     <View style="@style/proifleDetailsView" />
@@ -152,16 +140,50 @@
                     <RelativeLayout style="@style/profileDetailsLayout">
 
                         <ImageView
-
+                            android:id="@+id/imageemail3"
                             style="@style/profileDetailsImage"
                             android:src="@drawable/ic_email" />
 
                         <EditText
 
+                            android:id="@+id/order_mobile_model"
                             style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imageemail3"
+                            android:hint="Enter Mobile Model" />
+                    </RelativeLayout>
 
-                            android:hint="Enter Repairing Charges"
-                            android:inputType="textPassword" />
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imageemail4"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                        <EditText
+
+                            android:id="@+id/order_mobile_fault"
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imageemail4"
+                            android:hint="Enter Mobile Fault" />
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imageemail5"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                        <EditText
+
+                            android:id="@+id/order_repair_charges"
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imageemail5"
+                            android:hint="Enter Repairing Charges" />
                     </RelativeLayout>
 
                     <View style="@style/proifleDetailsView" />
@@ -171,15 +193,16 @@
                         android:layout_height="33dp">
 
                         <ImageView
-
+                            android:id="@+id/imageemail6"
                             style="@style/profileDetailsImage"
                             android:src="@drawable/ic_email" />
 
                         <EditText
 
+                            android:id="@+id/order_fault_description"
                             style="@style/profileDetailsMiniText"
-                            android:hint="Enter Fault Description"
-                            android:inputType="textPassword" />
+                            android:layout_toRightOf="@id/imageemail6"
+                            android:hint="Enter Fault Description" />
                     </RelativeLayout>
 
 
@@ -188,15 +211,16 @@
                     <RelativeLayout style="@style/profileDetailsLayout">
 
                         <ImageView
-
+                            android:id="@+id/imageemail7"
                             style="@style/profileDetailsImage"
                             android:src="@drawable/ic_email" />
 
                         <EditText
 
+                            android:id="@+id/order_repair_status"
                             style="@style/profileDetailsMiniText"
-                            android:hint="Enter Order Status"
-                            android:inputType="textPassword" />
+                            android:layout_toRightOf="@id/imageemail7"
+                            android:hint="Enter Order Status" />
                     </RelativeLayout>
 
                     <View style="@style/proifleDetailsView" />
@@ -208,7 +232,8 @@
 
                         android:layout_marginTop="20dp"
                         android:background="@color/profilePrimaryDark"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:layout_marginBottom="30dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -218,16 +243,16 @@
 
                             <Button
 
+                                android:id="@+id/btn_order_add_new"
                                 style="@style/profileStyledBackButton"
-
                                 android:layout_weight="1"
                                 android:text="Add Order" />
 
                             <Button
 
+                                android:id="@+id/btn_order_cancel_add"
                                 style="@style/profileStyledBackButton"
                                 android:layout_marginLeft="10dp"
-
                                 android:layout_weight="1"
                                 android:text="Cancel" />
 

@@ -27,13 +27,23 @@
         android:textStyle="bold"
         android:layout_marginTop="20dp"
         android:gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You will be redirect to EasyPaisa / JazzCash page to complete the payment. Make the payment within 60 seconds of clicking the pay securely button. If you want to pay online you choose one of this method to pay your bills."
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:gravity="center_horizontal"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Choose Your Payment Method"
-            android:textSize="20sp"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="30dp"
             android:gravity="center_horizontal"/>
 
         <Button

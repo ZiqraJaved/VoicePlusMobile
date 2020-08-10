@@ -1,20 +1,6 @@
 package com.iteam.voiceplusmobile.ui.feedbackreview;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
-public class FeedbackSchema {
-
-    @SerializedName("user_feedback")
-    @Expose
-    private String userFeedback;
-    @SerializedName("user_phone_number")
-    @Expose
-    private String userPhoneNumber;
-    @SerializedName("user_real_name")
-    @Expose
-    private String userRealName;
-
+public class CustomListDataModel {
     public String getUserFeedback() {
         return userFeedback;
     }
@@ -38,5 +24,9 @@ public class FeedbackSchema {
     public void setUserRealName(String userRealName) {
         this.userRealName = userRealName;
     }
+
+    private String userFeedback;
+    private String userPhoneNumber;
+    private String userRealName;
 
 }

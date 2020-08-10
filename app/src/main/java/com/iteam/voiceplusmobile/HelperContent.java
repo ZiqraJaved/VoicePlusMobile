@@ -1,6 +1,7 @@
 package com.iteam.voiceplusmobile;
 
 import com.iteam.voiceplusmobile.ui.adminpanel.ordermanagement.CustomOrderModel;
+import com.iteam.voiceplusmobile.ui.feedbackreview.FeedbackSchema;
 import com.iteam.voiceplusmobile.ui.pricing.CustomListAdapter;
 import com.iteam.voiceplusmobile.ui.pricing.CustomListDataModel;
 
@@ -52,6 +53,16 @@ public class HelperContent {
     }
 
     public static CustomOrderModel customOrderModel;
+
+    public static com.iteam.voiceplusmobile.ui.feedbackreview.CustomListDataModel getFeedbackSchema() {
+        return feedbackSchema;
+    }
+
+    public static void setFeedbackSchema(com.iteam.voiceplusmobile.ui.feedbackreview.CustomListDataModel feedbackSchema) {
+        HelperContent.feedbackSchema = feedbackSchema;
+    }
+
+    public static com.iteam.voiceplusmobile.ui.feedbackreview.CustomListDataModel feedbackSchema;
 
 
     public static CustomListDataModel getCustomListDataModel() {
@@ -140,4 +151,6 @@ public class HelperContent {
         setCreated_at("");
 
     }
+
+
 }

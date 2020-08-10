@@ -1,7 +1,5 @@
 package com.iteam.voiceplusmobile.ui.adminpanel.additemmanagement;
 
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProviders;
 
 import android.app.ProgressDialog;
@@ -21,15 +19,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.iteam.voiceplusmobile.R;
-import com.iteam.voiceplusmobile.ui.adminpanel.manageitem.ManageItemFragment;
 
 public class AddItemManagementFragment extends Fragment {
 
     private AddItemManagementViewModel mViewModel;
-    private Button button;
-    private final String rootUrl = "http://127.0.0.1:8000/api/pricing/add_new_item/";
+    private Button btnCancel, choosefile;
+    private final String rootUrl = "https://voice-plus-mobile.herokuapp.com/api/pricing/";
     private AddItemServices addItemServices;
 
     public static AddItemManagementFragment newInstance() {
@@ -43,12 +42,16 @@ public class AddItemManagementFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_add_item_management, container, false);
         final EditText mobile_company = view.findViewById(R.id.admin_item_brand);
         final EditText mobile_model = view.findViewById(R.id.admin_item_model);
+        final Button admin_add_item;
         final EditText repairing_part = view.findViewById(R.id.admin_item_product_name);
         final EditText repairing_description = view.findViewById(R.id.admin_repairing_description);
         final EditText repairing_price = view.findViewById(R.id.admin_item_price);
+        final TextView imagefile = view.findViewById(R.id.admin_txt_image_file);
+        btnCancel = view.findViewById(R.id.btn_add_item_cancel);
+        choosefile = view.findViewById(R.id.btn_admin_choose_file);
 
-        button = view.findViewById(R.id.btn_add_item_cancel);
-        button.setOnClickListener(new View.OnClickListener() {
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -57,8 +60,10 @@ public class AddItemManagementFragment extends Fragment {
 //                FragmentTransaction transaction = fragmentManager.beginTransaction();
 //
 //                ManageItemFragment manageItemFragment = new ManageItemFragment(new ManageItemFragment.ClickListener() {
+//                Intent intent = new Intent(getActivity().getApplication(), ManageItemFragment.class);
+//                startActivity(intent);
 //                });
-//                transaction.replace(R.id.nav_host_fragment, manageItemFragment);
+//                transaction.replace(R.id.frame, manageItemFragment);
 //                transaction.addToBackStack(null);
 //                transaction.commit();
 
@@ -66,26 +71,36 @@ public class AddItemManagementFragment extends Fragment {
 
         });
 
-        Button admin_add_item = view.findViewById(R.id.admin_add_item);
+        admin_add_item = view.findViewById(R.id.admin_add_item);
         admin_add_item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (mobile_company.getText().toString() == null || mobile_company.getText().toString().trim().equals("")) {
+                    Toast.makeText(getActivity().getBaseContext(), "Please enter Company Name!", Toast.LENGTH_SHORT).show();
 
+                } else if (mobile_model.getText().toString() == null || mobile_model.getText().toString().trim().equals("")) {
+                    Toast.makeText(getActivity().getBaseContext(), "Please enter mobile model!", Toast.LENGTH_SHORT).show();
+                } else if (repairing_part.getText().toString() == null || repairing_part.getText().toString().trim().equals("")) {
+                    Toast.makeText(getActivity().getBaseContext(), "Please enter mobile model!", Toast.LENGTH_SHORT).show();
+                } else if (repairing_description.getText().toString() == null || repairing_description.getText().toString().trim().equals("")) {
+                    Toast.makeText(getActivity().getBaseContext(), "Please enter mobile model!", Toast.LENGTH_SHORT).show();
+                } else if (repairing_price.getText().toString() == null || repairing_price.getText().toString().trim().equals("")) {
+                    Toast.makeText(getActivity().getBaseContext(), "Please enter mobile model!", Toast.LENGTH_SHORT).show();
 
-                Retrofit retrofit = new Retrofit.Builder()
-                        .baseUrl(rootUrl)
-                        .addConverterFactory(GsonConverterFactory.create())
-                        .build();
-                addItemServices = retrofit.create(AddItemServices.class);
-//                @TODO: Add checks to validate all entries
+                } else {
 
-                String _mobile_company = mobile_company.getText().toString();
-                String _mobile_model = mobile_model.getText().toString();
-                String _repairing_part = repairing_part.getText().toString();
-                String _repairing_description = repairing_description.getText().toString();
-                String _repairing_price = repairing_price.getText().toString();
-                add_new_item_fu(_mobile_company, _mobile_model, _repairing_part, _repairing_description, _repairing_price);
-//# fields = ['mobile_company', 'mobile_model', 'repairing_part', 'repairing_price', 'repairing_description']
+                    Retrofit retrofit = new Retrofit.Builder()
+                            .baseUrl(rootUrl)
+                            .addConverterFactory(GsonConverterFactory.create())
+                            .build();
+                    addItemServices = retrofit.create(AddItemServices.class);
+                    String _mobile_company = mobile_company.getText().toString();
+                    String _mobile_model = mobile_model.getText().toString();
+                    String _repairing_part = repairing_part.getText().toString();
+                    String _repairing_description = repairing_description.getText().toString();
+                    String _repairing_price = repairing_price.getText().toString();
+                    add_new_item_fu(_mobile_company, _mobile_model, _repairing_part, _repairing_description, _repairing_price);
+                }
             }
         });
 
@@ -93,40 +108,44 @@ public class AddItemManagementFragment extends Fragment {
     }
 
     private void add_new_item_fu(String mobile_company, String mobile_model, String repairing_part, String repairing_description, String repairing_price) {
+        try {
 
-        AddItem addItem = new AddItem();
-        addItem.setMobile_company(mobile_company);
-        addItem.setMobile_model(mobile_model);
-        addItem.setRepairing_part(repairing_part);
-        addItem.setRepairing_description(repairing_description);
-        addItem.setRepairing_price(Integer.parseInt(repairing_price));
+            AddItem addItem = new AddItem();
+
+            addItem.setMobileCompany(mobile_company);
+            addItem.setMobileModel(mobile_model);
+            addItem.setRepairingPart(repairing_part);
+            addItem.setRepairingDescription(repairing_description);
+            addItem.setRepairingPrice(Integer.parseInt(repairing_price));
 
 
-        final ProgressDialog progressDoalog;
-        progressDoalog = new ProgressDialog(getContext());
-        progressDoalog.setMessage("Login your account into application.");
-        progressDoalog.setTitle("Please Wait");
-        progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
-        progressDoalog.show();
+            final ProgressDialog progressDoalog;
+            progressDoalog = new ProgressDialog(getContext());
+            progressDoalog.setMessage("Login your account into application.");
+            progressDoalog.setTitle("Please Wait");
+            progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressDoalog.show();
 
-        Call<AddItem> call = addItemServices.addNewItem(addItem);
+            Call<AddItem> call = addItemServices.addNewItem(addItem);
 
-        call.enqueue(new Callback<AddItem>() {
-            @Override
-            public void onResponse(Call<AddItem> call, Response<AddItem> response) {
-                progressDoalog.dismiss();
-                    String details = response.body().getDetail();
-                System.out.println(details);
-            }
+            call.enqueue(new Callback<AddItem>() {
+                @Override
+                public void onResponse(Call<AddItem> call, Response<AddItem> response) {
+                    progressDoalog.dismiss();
+                    Toast.makeText(getActivity().getBaseContext(), "Item has added successfully.", Toast.LENGTH_LONG).show();
 
-            @Override
-            public void onFailure(Call<AddItem> call, Throwable t) {
-                progressDoalog.dismiss();
-                System.out.print("Failed to process request");
-                System.out.println(t.getStackTrace());
-                System.out.println(t.getCause());
-            }
-        });
+                }
+
+                @Override
+                public void onFailure(Call<AddItem> call, Throwable t) {
+                    progressDoalog.dismiss();
+                    Toast.makeText(getActivity().getBaseContext(), "Unable to process your request.", Toast.LENGTH_LONG).show();
+                }
+            });
+        } catch (Exception exp) {
+            Toast.makeText(getActivity().getBaseContext(), "Unable to process your request..", Toast.LENGTH_LONG).show();
+
+        }
 
     }
 

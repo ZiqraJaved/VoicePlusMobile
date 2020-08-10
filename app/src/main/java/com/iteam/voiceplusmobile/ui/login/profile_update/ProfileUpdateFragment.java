@@ -19,6 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -62,7 +63,7 @@ public class ProfileUpdateFragment extends Fragment {
         final EditText user_password_conf = view.findViewById(R.id.profile_update_user_password_conf);
         user_password_conf.setText(HelperContent.getUser_password());
 
-        TextView back_to_profile = view.findViewById(R.id.profile_update_back);
+        Button back_to_profile = view.findViewById(R.id.profile_update_back);
         back_to_profile.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -77,7 +78,7 @@ public class ProfileUpdateFragment extends Fragment {
 
         });
 
-        TextView update_profile = view.findViewById(R.id.profile_update_account);
+        Button update_profile = view.findViewById(R.id.profile_update_account);
         update_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -137,18 +138,23 @@ public class ProfileUpdateFragment extends Fragment {
                 @Override
                 public void onResponse(Call<UpdateUser> call, Response<UpdateUser> response) {
                     progressDoalog.dismiss();
-                    String _response = response.body().user_info();
-                    if (_response.contains("Updated Succ")) {
-                        Toast.makeText(getActivity().getBaseContext(), "Account information has updated successfully.", Toast.LENGTH_LONG).show();
-                        HelperContent.setUser_real_name(user_real_name);
-                        HelperContent.setUser_password(user_password);
-                        HelperContent.setUser_address(user_address);
+                    try {
+                        String _response = response.body().user_info();
+                        if (_response.contains("Updated Succ")) {
+                            Toast.makeText(getActivity().getBaseContext(), "Account information has updated successfully.", Toast.LENGTH_LONG).show();
+                            HelperContent.setUser_real_name(user_real_name);
+                            HelperContent.setUser_password(user_password);
+                            HelperContent.setUser_address(user_address);
 
-                    } else {
-                        Toast.makeText(getActivity().getBaseContext(), "Failed to update account information. Please try again.", Toast.LENGTH_LONG).show();
+                        } else {
+                            Toast.makeText(getActivity().getBaseContext(), "Failed to update account information. Please try again.", Toast.LENGTH_LONG).show();
+
+                        }
+
+                    } catch (Exception exp) {
+                        Toast.makeText(getActivity().getBaseContext(), "Some failure observed while updating profile. Please try again later.", Toast.LENGTH_LONG).show();
 
                     }
-
 
                 }
 

@@ -20,17 +20,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.iteam.voiceplusmobile.HelperContent;
 import com.iteam.voiceplusmobile.R;
+import com.iteam.voiceplusmobile.ui.adminpanel.addneworder.AddNewOrderFragment;
 import com.iteam.voiceplusmobile.ui.adminpanel.editdelelteordermanagement.EditDeleteOrderManagementFragment;
+import com.iteam.voiceplusmobile.ui.adminpanel.updatemanageitem.UpdateManageItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class OrderManagementFragment extends Fragment {
-
+    Button addneworder;
     private OrderManagementViewModel mViewModel;
 
     public static OrderManagementFragment newInstance() {
@@ -43,10 +46,12 @@ public class OrderManagementFragment extends Fragment {
         final View view = inflater.inflate(R.layout.fragment_manage_order, container, false);
         final ProgressDialog progressDoalog;
         progressDoalog = new ProgressDialog(getContext());
-        progressDoalog.setMessage("Loading pricing information from server.");
+        progressDoalog.setMessage("Loading order list from server.");
         progressDoalog.setTitle("Please Wait");
         progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
+try {
+
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl("https://voice-plus-mobile.herokuapp.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
@@ -116,6 +121,22 @@ public class OrderManagementFragment extends Fragment {
                 System.out.println(t.getMessage());
                 progressDoalog.dismiss();
 
+            }
+        });
+} catch (Exception e){
+
+}
+        addneworder=view.findViewById(R.id.btn_add_new_order);
+        addneworder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction transaction = fragmentManager.beginTransaction();
+
+                AddNewOrderFragment addNewOrderFragment = new AddNewOrderFragment();
+                transaction.replace(R.id.frame, addNewOrderFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
         return view;

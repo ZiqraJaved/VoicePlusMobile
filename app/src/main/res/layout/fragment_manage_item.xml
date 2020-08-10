@@ -13,6 +13,7 @@
 
         <SearchView
             android:id="@+id/btn_search_item"
+            android:queryHint="Search Item Here"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -26,6 +27,7 @@
             android:background="@drawable/information_button"
             android:drawableLeft="@drawable/additem"
             android:text="Add New Item"
+            android:layout_marginBottom="20dp"
 
             />
         <ListView

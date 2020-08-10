@@ -153,16 +153,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:orientation="horizontal"
-                            android:weightSum="2">
+                            android:weightSum="2"
+                            android:layout_marginBottom="30dp">
 
-                            <TextView
+                            <Button
                                 android:id="@+id/profile_update_account"
                                 style="@style/profileStyledBackButton"
                                 android:layout_marginLeft="10dp"
                                 android:layout_weight="1"
                                 android:text="Update Account" />
 
-                            <TextView
+                            <Button
                                 android:id="@+id/profile_update_back"
                                 style="@style/profileStyledBackButton"
                                 android:layout_marginLeft="10dp"

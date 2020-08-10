@@ -28,7 +28,6 @@ import android.widget.Toast;
 import com.iteam.voiceplusmobile.HelperContent;
 import com.iteam.voiceplusmobile.R;
 import com.iteam.voiceplusmobile.ui.login.user_login.LoginFragment;
-import com.iteam.voiceplusmobile.ui.login.user_login.LoginService;
 import com.iteam.voiceplusmobile.ui.pricing.CustomListDataModel;
 import com.iteam.voiceplusmobile.ui.pricing.PricingFragment;
 
@@ -36,7 +35,7 @@ public class BookMyRepair extends Fragment {
 
     private final String BookRepairUrl = "https://voice-plus-mobile.herokuapp.com/api/";
     private RepairService EndPointName;
-
+    View view;
     private BookMyRepairViewModel mViewModel;
 
     public static BookMyRepair newInstance() {
@@ -47,7 +46,7 @@ public class BookMyRepair extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
 
-        final View view = inflater.inflate(R.layout.fragment_book_my_repair, container, false);
+        view = inflater.inflate(R.layout.fragment_book_my_repair, container, false);
         Button book_repair_cancel = view.findViewById(R.id.book_repair_cancel);
         book_repair_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +96,7 @@ public class BookMyRepair extends Fragment {
         final EditText book_repair_company_name = view.findViewById(R.id.book_repair_company_name);
         final EditText book_repair_mobile_model = view.findViewById(R.id.book_repair_mobile_model);
         final EditText book_repair_mobile_problem = view.findViewById(R.id.book_repair_mobile_problem);
-        EditText txt_choosefile = view.findViewById(R.id.txt_choosefile);
+        EditText txt_choosefile = view.findViewById(R.id.admin_txt_image_file);
         final CheckBox checkbox_book_repair = view.findViewById(R.id.checkbox_book_repair);
         btn_apply_repair.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,6 +139,9 @@ public class BookMyRepair extends Fragment {
     }
 
     private void callEndPoint(String mobile_fault, String user_phone_number, String mobile_brand, String mobile_model) {
+        final ProgressDialog progressDoalog = new ProgressDialog(getContext());
+        ;
+
         try {
 
             OrderSchema endpoint_schema = new OrderSchema();
@@ -151,8 +153,6 @@ public class BookMyRepair extends Fragment {
             endpoint_schema.setImage(null);
 
 
-            final ProgressDialog progressDoalog;
-            progressDoalog = new ProgressDialog(getContext());
             progressDoalog.setMessage("Registering your order online.");
             progressDoalog.setTitle("Please Wait");
             progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
@@ -163,21 +163,23 @@ public class BookMyRepair extends Fragment {
                 @Override
                 public void onResponse(Call<OrderSchema> call, Response<OrderSchema> response) {
                     progressDoalog.dismiss();
-                    if(response.isSuccessful()) {
-                        String TAG="VOICE_PLUS_MOBILE";
-                        Log.i(TAG, "post submitted to API." + response.body().toString());
-                    }
-                    System.out.println(response.body());
+                    Toast.makeText(getActivity().getBaseContext(), "Congratulations, Your order has successfully placed.", Toast.LENGTH_LONG).show();
+                    reset_controls();
                 }
 
                 @Override
                 public void onFailure(Call<OrderSchema> call, Throwable t) {
                     progressDoalog.dismiss();
-                    System.out.println("Failed to store record in database" + t.getMessage());
+                    reset_controls();
+                    Toast.makeText(getActivity().getBaseContext(), "Sorry, we are unable to fulfil your request right now.", Toast.LENGTH_LONG).show();
+
                 }
             });
 
         } catch (Exception exception) {
+            progressDoalog.dismiss();
+            reset_controls();
+            Toast.makeText(getActivity().getBaseContext(), "Sorry, we are unable to fulfil your request right now.", Toast.LENGTH_LONG).show();
 
         }
     }
@@ -187,6 +189,19 @@ public class BookMyRepair extends Fragment {
         super.onActivityCreated(savedInstanceState);
         mViewModel = ViewModelProviders.of(this).get(BookMyRepairViewModel.class);
         // TODO: Use the ViewModel
+    }
+
+    private void reset_controls() {
+        final EditText book_repair_company_name = view.findViewById(R.id.book_repair_company_name);
+        book_repair_company_name.setText("");
+        final EditText book_repair_mobile_model = view.findViewById(R.id.book_repair_mobile_model);
+        book_repair_mobile_model.setText("");
+        final EditText book_repair_mobile_problem = view.findViewById(R.id.book_repair_mobile_problem);
+        book_repair_mobile_problem.setText("");
+//        EditText txt_choosefile = view.findViewById(R.id.admin_txt_image_file);
+        final CheckBox checkbox_book_repair = view.findViewById(R.id.checkbox_book_repair);
+        checkbox_book_repair.setChecked(false);
+
     }
 
 }

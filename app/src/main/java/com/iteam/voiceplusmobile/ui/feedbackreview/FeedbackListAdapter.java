@@ -1,4 +1,4 @@
 package com.iteam.voiceplusmobile.ui.feedbackreview;
 
-public interface feedbackservice {
+public class feedbackListAdapter {
 }

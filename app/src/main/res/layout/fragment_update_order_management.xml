@@ -55,7 +55,8 @@
                         <EditText
                             style="@style/profileDetailsMiniText"
                             android:layout_toRightOf="@id/imagename"
-                            android:hint="Enter Customer name" />
+                            android:hint="Enter Customer name"
+                            android:id="@+id/txt_customername"/>
 
                     </RelativeLayout>
 
@@ -72,7 +73,8 @@
                         <EditText
                             style="@style/profileDetailsMiniText"
                             android:layout_toRightOf="@id/imagenumber"
-                            android:hint="Enter Customer Mobile Number" />
+                            android:hint="Enter Customer Mobile Number"
+                            android:id="@+id/txt_mobilenumber"/>
 
                     </RelativeLayout>
 
@@ -90,7 +92,8 @@
 
                             style="@style/profileDetailsMiniText"
                             android:layout_toRightOf="@id/imageaddress"
-                            android:hint="Enter Customer address." />
+                            android:hint="Enter Customer address."
+                            android:id="@+id/txt_address"/>
 
                     </RelativeLayout>
 
@@ -108,12 +111,12 @@
 
                             style="@style/profileDetailsMiniText"
                             android:layout_toRightOf="@id/imagepass"
-                            android:text="Password" />
+                            android:text="Password"
+                            android:id="@+id/txt_password"/>
 
                     </RelativeLayout>
 
                     <View style="@style/proifleDetailsView" />
-
                     <RelativeLayout style="@style/profileDetailsLayout">
 
                         <ImageView
@@ -126,7 +129,25 @@
                             style="@style/profileDetailsMiniText"
                             android:layout_toRightOf="@id/imageemail"
                             android:hint="Enter Customer Mobile Brnad"
-                            android:inputType="textPassword" />
+                            android:id="@+id/txt_mobilecompany"/>
+
+                    </RelativeLayout>
+
+                    <View style="@style/proifleDetailsView" />
+
+                    <RelativeLayout style="@style/profileDetailsLayout">
+
+                        <ImageView
+                            android:id="@+id/imageemail1"
+                            style="@style/profileDetailsImage"
+                            android:src="@drawable/ic_email" />
+
+                        <EditText
+
+                            style="@style/profileDetailsMiniText"
+                            android:layout_toRightOf="@id/imageemail1"
+                            android:hint="Enter Customer Mobile Model"
+                            android:id="@+id/txt_mobilemodel"/>
 
                     </RelativeLayout>
 
@@ -143,8 +164,15 @@
                         <EditText
                             style="@style/profileDetailsMiniText"
 
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="51dp"
+                            android:layout_marginLeft="51dp"
+                            android:layout_marginBottom="0dp"
                             android:hint="Enter Mobile Fault"
-                            android:inputType="textPassword" />
+                            android:id="@+id/txt_mobilefault"
+                         />
                     </RelativeLayout>
 
                     <View style="@style/proifleDetailsView" />
@@ -160,8 +188,14 @@
 
                             style="@style/profileDetailsMiniText"
 
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="52dp"
+                            android:layout_marginLeft="52dp"
+                            android:layout_marginBottom="0dp"
                             android:hint="Enter Repairing Charges"
-                            android:inputType="textPassword" />
+                         android:id="@+id/txt_repairingcharges"/>
                     </RelativeLayout>
 
                     <View style="@style/proifleDetailsView" />
@@ -178,8 +212,14 @@
                         <EditText
 
                             style="@style/profileDetailsMiniText"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="52dp"
+                            android:layout_marginLeft="52dp"
+                            android:layout_marginBottom="-5dp"
                             android:hint="Enter Fault Description"
-                            android:inputType="textPassword" />
+                            android:id="@+id/txt_faultdescription" />
                     </RelativeLayout>
 
 
@@ -195,8 +235,14 @@
                         <EditText
 
                             style="@style/profileDetailsMiniText"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="50dp"
+                            android:layout_marginLeft="50dp"
+                            android:layout_marginBottom="0dp"
                             android:hint="Enter Order Status"
-                            android:inputType="textPassword" />
+                           android:id="@+id/txt_orderstatus" />
                     </RelativeLayout>
 
                     <View style="@style/proifleDetailsView" />
@@ -221,7 +267,8 @@
                                 style="@style/profileStyledBackButton"
 
                                 android:layout_weight="1"
-                                android:text="Update Order" />
+                                android:text="Update Order"
+                                android:id="@+id/btn_admin_update_order"/>
 
                             <Button
 
@@ -229,7 +276,8 @@
                                 android:layout_marginLeft="10dp"
 
                                 android:layout_weight="1"
-                                android:text="Cancel" />
+                                android:text="Cancel"
+                                android:id="@+id/btn_admin_order_update_cancel"/>
 
                         </LinearLayout>
 

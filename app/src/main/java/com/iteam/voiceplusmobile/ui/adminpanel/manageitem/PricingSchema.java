@@ -12,15 +12,18 @@ public class PricingSchema {
     @SerializedName("mobile_model")
     @Expose
     private String mobileModel;
+    @SerializedName("repairing_description")
+    @Expose
+    private String repairingDescription;
     @SerializedName("repairing_part")
     @Expose
     private String repairingPart;
     @SerializedName("repairing_price")
     @Expose
     private Integer repairingPrice;
-    @SerializedName("repairing_description")
+    @SerializedName("id")
     @Expose
-    private String repairingDescription;
+    private Integer id;
 
     public String getMobileCompany() {
         return mobileCompany;
@@ -36,6 +39,14 @@ public class PricingSchema {
 
     public void setMobileModel(String mobileModel) {
         this.mobileModel = mobileModel;
+    }
+
+    public String getRepairingDescription() {
+        return repairingDescription;
+    }
+
+    public void setRepairingDescription(String repairingDescription) {
+        this.repairingDescription = repairingDescription;
     }
 
     public String getRepairingPart() {
@@ -54,12 +65,12 @@ public class PricingSchema {
         this.repairingPrice = repairingPrice;
     }
 
-    public String getRepairingDescription() {
-        return repairingDescription;
+    public Integer getId() {
+        return id;
     }
 
-    public void setRepairingDescription(String repairingDescription) {
-        this.repairingDescription = repairingDescription;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
 }

@@ -51,6 +51,7 @@
 
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+            <View style="@style/proifleDetailsView" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -69,6 +70,7 @@
 
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+            <View style="@style/proifleDetailsView" />
 
             <ImageView
                 android:id="@+id/price_detail_image_id"
@@ -80,6 +82,7 @@
                 android:maxHeight="110dp"
                 android:scaleType="fitCenter"
                 android:src="@drawable/ic_services" />
+            <View style="@style/proifleDetailsView" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -99,6 +102,7 @@
                 android:textColor="@color/black"
 
                 android:textSize="20sp" />
+            <View style="@style/proifleDetailsView" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -117,6 +121,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+            <View style="@style/proifleDetailsView" />
 
             <TextView
                 android:layout_width="match_parent"
@@ -133,12 +138,14 @@
                 android:text="Enter Product Description"
                 android:textColor="@color/black"
                 android:textSize="20sp" />
+            <View style="@style/proifleDetailsView" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:weightSum="2">
+                android:weightSum="2"
+                android:layout_marginBottom="30dp">
 
                 <Button
                     android:id="@+id/pricing_btn_back"

@@ -22,6 +22,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.SearchView;
 
 import com.iteam.voiceplusmobile.HelperContent;
 import com.iteam.voiceplusmobile.R;
@@ -52,12 +53,29 @@ public class ManageItemFragment extends Fragment {
     }
 
     private Button button;
+    SearchView simpleSearchView;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_manage_item, container, false);
 
+        simpleSearchView = view.findViewById(R.id.btn_search_item); // inititate a search view
+        simpleSearchView.setQueryHint("Search View");
+
+        simpleSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+// do something on text submit
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+// do something when text changes
+                return false;
+            }
+        });
 
         button = view.findViewById(R.id.btn_add_item);
         button.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +90,7 @@ public class ManageItemFragment extends Fragment {
 
         final ProgressDialog progressDoalog;
         progressDoalog = new ProgressDialog(getContext());
-        progressDoalog.setMessage("Loading pricing information from server.");
+        progressDoalog.setMessage("Loading items list from server.");
         progressDoalog.setTitle("Please Wait");
         progressDoalog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
         progressDoalog.show();
@@ -96,6 +114,7 @@ public class ManageItemFragment extends Fragment {
                 for (PricingSchema pricingSchema : posts) {
 
                     CustomListDataModel customListDataModel = new CustomListDataModel();
+                    customListDataModel.setId(pricingSchema.getId());
                     customListDataModel.setImage_id(get_image_id(pricingSchema.getMobileCompany()));
                     customListDataModel.setPhone_model_name(pricingSchema.getMobileModel());
                     customListDataModel.setRepair_part_name(pricingSchema.getRepairingPart());
